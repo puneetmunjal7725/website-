@@ -24,12 +24,12 @@ body.light-mode nav{background:rgba(240,244,255,0.95)}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:'Exo 2',sans-serif;font-size:1.35rem;font-weight:600;letter-spacing:.04em;text-transform:lowercase;color:var(--white)}
 body.light-mode .logo{color:#0d1f4e}
 .logo img{width:32px;height:32px;object-fit:contain}
-.nav-right{display:flex;align-items:center;gap:1rem}
+.nav-right{display:flex;align-items:center;gap:2rem}
 .nav-link{color:rgba(255,255,255,0.65);text-decoration:none;font-size:.9rem;transition:color .2s}
 .nav-link:hover{color:#fff}
 body.light-mode .nav-link{color:rgba(10,30,63,0.65)}
 body.light-mode .nav-link:hover{color:#0A1E3F}
-.theme-btn{background:rgba(41,121,255,0.1);border:1px solid rgba(41,121,255,0.3);color:var(--text);padding:.35rem .9rem;border-radius:20px;cursor:pointer;font-size:.82rem;transition:all .2s}
+.theme-btn{background:rgba(41,121,255,0.1);border:1px solid rgba(41,121,255,0.3);color:var(--text);width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:.82rem;transition:all .2s;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .theme-btn:hover{background:rgba(41,121,255,0.2)}
 body.light-mode .theme-btn{background:rgba(13,71,161,0.08);color:#0A1E3F}
 
@@ -98,9 +98,47 @@ textarea.form-input{resize:vertical;min-height:120px}
 footer{background:rgba(0,0,0,0.2);border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--text2);font-size:.85rem}
 body.light-mode footer{background:rgba(13,71,161,0.04)}
 footer a{color:#5ba3ff;text-decoration:none}
+
+/* ADMIN PANEL */
+#admin-trigger{position:fixed;bottom:1.5rem;right:1.5rem;width:44px;height:44px;background:rgba(41,121,255,0.12);border:1px solid rgba(41,121,255,0.25);border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;z-index:999;transition:all .2s;opacity:0.4}
+#admin-trigger:hover{opacity:1;background:rgba(41,121,255,0.25)}
+#admin-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:1000;backdrop-filter:blur(4px)}
+.admin-modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:1001;background:#0d1b36;border:1px solid rgba(41,121,255,0.3);border-radius:20px;padding:2rem;width:min(700px,95vw);max-height:88vh;overflow-y:auto;-webkit-overflow-scrolling:touch}
+body.light-mode .admin-modal{background:#ffffff;border-color:rgba(13,71,161,0.2)}
+.admin-modal h2{font-family:'Exo 2',sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:1.5rem;color:#5ba3ff}
+.adm-section{margin-bottom:1.75rem}
+.adm-section h3{font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:.75rem;padding-bottom:.4rem;border-bottom:1px solid rgba(255,255,255,0.07)}
+body.light-mode .adm-section h3{color:rgba(10,30,63,0.38);border-bottom-color:rgba(13,71,161,0.1)}
+.adm-inp{width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(41,121,255,0.2);border-radius:10px;padding:.65rem 1rem;color:var(--text);font-family:'Instrument Sans',sans-serif;font-size:.9rem;outline:none;margin-bottom:.6rem;transition:border-color .2s}
+.adm-inp:focus{border-color:rgba(41,121,255,0.5)}
+body.light-mode .adm-inp{background:#f5f8ff;border-color:rgba(13,71,161,0.18);color:#0A1435}
+.adm-inp::placeholder{color:rgba(255,255,255,0.22)}
+body.light-mode .adm-inp::placeholder{color:rgba(10,30,63,0.3)}
+.adm-row{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.adm-btn{background:linear-gradient(135deg,#2979FF,#1a5bbf);color:#fff;border:none;padding:.7rem 1.5rem;border-radius:10px;font-weight:600;font-size:.9rem;cursor:pointer;transition:all .2s;width:100%}
+.adm-btn:hover{opacity:.88;transform:translateY(-1px)}
+.adm-btn.secondary{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:var(--text)}
+.adm-btn.secondary:hover{background:rgba(255,255,255,0.13)}
+.adm-job-item{display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.03);border:1px solid rgba(41,121,255,0.1);border-radius:10px;padding:.65rem 1rem;gap:.75rem;margin-bottom:.5rem}
+body.light-mode .adm-job-item{background:rgba(13,71,161,0.04)}
+.adm-job-name{font-size:.88rem;font-weight:500;flex:1}
+.adm-del-btn{background:rgba(255,68,68,0.1);border:1px solid rgba(255,68,68,0.2);color:#ff8888;padding:.28rem .7rem;border-radius:7px;cursor:pointer;font-size:.78rem;transition:all .2s}
+.adm-del-btn:hover{background:rgba(255,68,68,0.25)}
+.adm-label{font-size:.76rem;color:rgba(255,255,255,0.45);margin-bottom:.25rem;display:block}
+body.light-mode .adm-label{color:rgba(10,30,63,0.42)}
+body.light-mode #pw-eye{color:rgba(10,30,63,0.35) !important}
+body.light-mode #adm-remember+label{color:rgba(10,30,63,0.55)}
+.adm-msg{font-size:.83rem;padding:.5rem 1rem;border-radius:8px;margin-bottom:.75rem;display:none}
+.adm-msg.ok{background:rgba(0,200,100,0.1);border:1px solid rgba(0,200,100,0.3);color:#00c864}
+.adm-msg.err{background:rgba(255,68,68,0.1);border:1px solid rgba(255,68,68,0.3);color:#ff8888}
+.adm-close{position:absolute;top:1.2rem;right:1.2rem;background:rgba(255,255,255,0.07);border:none;color:var(--text);width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.adm-close:hover{background:rgba(255,68,68,0.2)}
+
 </style>
 </head>
 <body>
+
+
 
 <nav>
   <a href="index.html" class="logo">
@@ -114,7 +152,7 @@ footer a{color:#5ba3ff;text-decoration:none}
     <a href="https://zyoris.com/#contact" class="nav-link">Contact</a>
     <a href="about.html" class="nav-link">About</a>
     <a href="careers.html" class="nav-link">Careers</a>
-    <button class="theme-btn" id="theme-btn" onclick="toggleTheme()">Light</button>
+    <button class="theme-btn" id="theme-btn" onclick="toggleTheme()" title="Toggle theme"><svg id="theme-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button>
   </div>
 </nav>
 
@@ -313,6 +351,10 @@ footer a{color:#5ba3ff;text-decoration:none}
     </div>
 
   </div>
+
+  <!-- Dynamic jobs added via admin panel -->
+  <div class="jobs-list" id="dynamic-jobs-container" style="margin-top:1.25rem"></div>
+
 </div>
 
 <!-- APPLICATION FORM -->
@@ -362,26 +404,32 @@ footer a{color:#5ba3ff;text-decoration:none}
 </footer>
 
 <script>
+
+function setThemeIcon(isLight){
+  const btn = document.getElementById('theme-btn');
+  if(!btn) return;
+  btn.innerHTML = isLight ? `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>` : `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`;
+}
 function toggleTheme(){
   const body = document.body;
   const btn = document.getElementById('theme-btn');
   body.classList.toggle('light-mode');
   const isLight = body.classList.contains('light-mode');
-  btn.innerHTML = isLight ? 'Dark' : 'Light';
+  setThemeIcon(isLight);
   localStorage.setItem('zyoris-theme', isLight ? 'light' : 'dark');
 }
 (function(){
   const btn = document.getElementById('theme-btn');
   const saved = localStorage.getItem('zyoris-theme');
-  if(saved === 'light'){ document.body.classList.add('light-mode'); if(btn) btn.innerHTML = 'Dark'; }
-  else if(saved === 'dark'){ document.body.classList.remove('light-mode'); if(btn) btn.innerHTML = 'Light'; }
+  if(saved === 'light'){ document.body.classList.add('light-mode'); if(btn) setThemeIcon(true); }
+  else if(saved === 'dark'){ document.body.classList.remove('light-mode'); if(btn) setThemeIcon(false); }
   else {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if(!prefersDark){ document.body.classList.add('light-mode'); if(btn) btn.innerHTML = 'Dark'; }
+    if(!prefersDark){ document.body.classList.add('light-mode'); if(btn) setThemeIcon(true); }
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
       if(localStorage.getItem('zyoris-theme')) return;
       document.body.classList.toggle('light-mode', !e.matches);
-      if(btn) btn.innerHTML = e.matches ? 'Light' : 'Dark';
+      if(btn) setThemeIcon(!e.matches);
     });
   }
 })();
@@ -439,3 +487,295 @@ async function submitApplication(){
 </script>
 </body>
 </html>
+</body>
+</html>
+<!-- ADMIN TRIGGER BUTTON (subtle, bottom-right) -->
+<button id="admin-trigger" onclick="openAdmin()" title="Admin">⚙</button>
+
+<!-- ADMIN OVERLAY -->
+<div id="admin-overlay" onclick="closeAdmin()"></div>
+
+<!-- ADMIN MODAL -->
+<div class="admin-modal" id="admin-panel" style="display:none">
+  <button class="adm-close" onclick="closeAdmin()">✕</button>
+
+  <!-- LOGIN SCREEN -->
+  <div id="adm-login-screen">
+    <h2>Admin Login</h2>
+    <div class="adm-msg" id="adm-login-msg"></div>
+    <label class="adm-label">Email ID</label>
+    <input type="email" id="adm-email" class="adm-inp" placeholder="Enter admin email" />
+    <label class="adm-label" style="margin-top:.25rem">Password</label>
+    <div style="position:relative">
+      <input type="password" id="adm-password" class="adm-inp" placeholder="Enter password" onkeydown="if(event.key==='Enter')adminLogin()" style="padding-right:2.8rem;margin-bottom:0" />
+      <button type="button" onclick="togglePwShow()" id="pw-eye" style="position:absolute;right:.75rem;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.4);font-size:1rem;padding:0;line-height:1" title="Show/Hide password">👁</button>
+    </div>
+    <div style="display:flex;align-items:center;gap:.5rem;margin:.75rem 0 1rem">
+      <input type="checkbox" id="adm-remember" style="width:15px;height:15px;accent-color:#2979FF;cursor:pointer" />
+      <label for="adm-remember" style="font-size:.82rem;color:rgba(255,255,255,0.5);cursor:pointer;user-select:none">Remember me</label>
+    </div>
+    <button class="adm-btn" onclick="adminLogin()">Login →</button>
+  </div>
+
+  <!-- MAIN PANEL (hidden until logged in) -->
+  <div id="adm-main-screen" style="display:none">
+    <h2>Job Manager</h2>
+    <div class="adm-msg" id="adm-main-msg"></div>
+
+    <!-- EXISTING JOBS -->
+    <div class="adm-section">
+      <h3>Current Openings</h3>
+      <div id="adm-jobs-list"><!-- rendered by JS --></div>
+    </div>
+
+    <!-- ADD NEW JOB -->
+    <div class="adm-section">
+      <h3>Add New Job</h3>
+      <label class="adm-label">Job Title *</label>
+      <input type="text" id="nj-title" class="adm-inp" placeholder="e.g. Frontend Developer Intern" />
+      
+      <div class="adm-row">
+        <div>
+          <label class="adm-label">Type Badge</label>
+          <input type="text" id="nj-type" class="adm-inp" placeholder="e.g. Internship" />
+        </div>
+        <div>
+          <label class="adm-label">Pay Badge</label>
+          <select id="nj-pay" class="adm-inp">
+            <option value="unpaid">Unpaid / Project-Based</option>
+            <option value="paid">Paid</option>
+            <option value="stipend">Stipend-Based</option>
+          </select>
+        </div>
+      </div>
+
+      <label class="adm-label">Tech Stack / Skills (comma-separated)</label>
+      <input type="text" id="nj-stack" class="adm-inp" placeholder="e.g. React.js, Node.js, MongoDB" />
+
+      <label class="adm-label">What You'll Do (one item per line)</label>
+      <textarea id="nj-work" class="adm-inp" rows="4" placeholder="Build frontend features&#10;Write clean API integrations&#10;Work on live product"></textarea>
+
+      <label class="adm-label">Requirements (one per line)</label>
+      <textarea id="nj-reqs" class="adm-inp" rows="3" placeholder="JavaScript ES6+ basics&#10;React.js fundamentals"></textarea>
+
+      <button class="adm-btn" onclick="addJob()" style="margin-top:.5rem">+ Add Job Posting</button>
+    </div>
+
+    <button class="adm-btn secondary" onclick="adminLogout()" style="margin-top:.5rem">Logout</button>
+  </div>
+</div>
+
+<script>
+// ── ADMIN CONFIG ─────────────────────────────────────────────────────────
+const ADMIN_EMAIL = 'zyoris.puneet@gmail.com';
+const ADMIN_PASSWORD = 'Puneet@07';
+const STORAGE_KEY = 'zyoris_jobs_v1';
+// ─────────────────────────────────────────────────────────────────────────
+
+function openAdmin(){
+  document.getElementById('admin-overlay').style.display='block';
+  document.getElementById('admin-panel').style.display='block';
+  const session = sessionStorage.getItem('adm_auth');
+  const remembered = localStorage.getItem('adm_remember');
+  if(session === 'yes' || remembered === 'yes'){
+    sessionStorage.setItem('adm_auth','yes');
+    showMainPanel();
+  }
+}
+function closeAdmin(){
+  document.getElementById('admin-overlay').style.display='none';
+  document.getElementById('admin-panel').style.display='none';
+  document.getElementById('adm-login-screen').style.display='block';
+  document.getElementById('adm-main-screen').style.display='none';
+  applyHiddenJobs();
+}
+// ── PASSWORD EYE TOGGLE ───────────────────────────────────────────────────
+function togglePwShow(){
+  const inp = document.getElementById('adm-password');
+  const eye = document.getElementById('pw-eye');
+  if(inp.type === 'password'){ inp.type = 'text'; eye.style.color = '#2979FF'; }
+  else { inp.type = 'password'; eye.style.color = 'rgba(255,255,255,0.4)'; }
+}
+
+function adminLogin(){
+  const email = document.getElementById('adm-email').value.trim();
+  const pw = document.getElementById('adm-password').value;
+  const remember = document.getElementById('adm-remember').checked;
+  const msg = document.getElementById('adm-login-msg');
+  if(email === ADMIN_EMAIL && pw === ADMIN_PASSWORD){
+    if(remember){
+      localStorage.setItem('adm_remember','yes');
+    } else {
+      localStorage.removeItem('adm_remember');
+    }
+    sessionStorage.setItem('adm_auth','yes');
+    document.getElementById('adm-password').value='';
+    // reset eye
+    document.getElementById('adm-password').type = 'password';
+    document.getElementById('pw-eye').style.color = 'rgba(255,255,255,0.4)';
+    showMainPanel();
+  } else {
+    msg.className='adm-msg err'; msg.textContent='Incorrect email or password.'; msg.style.display='block';
+    setTimeout(()=>msg.style.display='none',3000);
+  }
+}
+function adminLogout(){
+  sessionStorage.removeItem('adm_auth');
+  document.getElementById('adm-login-screen').style.display='block';
+  document.getElementById('adm-main-screen').style.display='none';
+}
+function showMainPanel(){
+  document.getElementById('adm-login-screen').style.display='none';
+  document.getElementById('adm-main-screen').style.display='block';
+  renderAdminJobs();
+}
+
+// ── JOB DATA ──────────────────────────────────────────────────────────────
+function getJobs(){
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || []; } catch(e){ return []; }
+}
+function saveJobs(jobs){
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(jobs));
+}
+
+// ── ADD JOB ───────────────────────────────────────────────────────────────
+function addJob(){
+  const title = document.getElementById('nj-title').value.trim();
+  const type  = document.getElementById('nj-type').value.trim() || 'Internship';
+  const pay   = document.getElementById('nj-pay').value;
+  const stack = document.getElementById('nj-stack').value.trim();
+  const work  = document.getElementById('nj-work').value.trim();
+  const reqs  = document.getElementById('nj-reqs').value.trim();
+  const msg   = document.getElementById('adm-main-msg');
+
+  if(!title){ msg.className='adm-msg err'; msg.textContent='Job title required!'; msg.style.display='block'; setTimeout(()=>msg.style.display='none',3000); return; }
+
+  const jobs = getJobs();
+  const id = 'job_' + Date.now();
+  const payLabel = pay==='paid'?'Paid':pay==='stipend'?'Stipend-Based':'Project-Based · Unpaid';
+  jobs.push({ id, title, type, pay, payLabel, stack, work, reqs });
+  saveJobs(jobs);
+
+  // Clear form
+  ['nj-title','nj-type','nj-stack','nj-work','nj-reqs'].forEach(k => document.getElementById(k).value='');
+  document.getElementById('nj-pay').value='unpaid';
+
+  renderAdminJobs();
+  renderDynamicJobs();
+
+  msg.className='adm-msg ok'; msg.textContent='✓ Job posted successfully!'; msg.style.display='block';
+  setTimeout(()=>msg.style.display='none',3000);
+}
+
+// ── DELETE JOB ────────────────────────────────────────────────────────────
+function deleteJob(id){
+  if(!confirm('Delete this job posting?')) return;
+  const jobs = getJobs().filter(j => j.id !== id);
+  saveJobs(jobs);
+  renderAdminJobs();
+  renderDynamicJobs();
+}
+
+// ── STATIC JOBS CONFIG ───────────────────────────────────────────────────
+const STATIC_JOBS = [
+  { id: 'job-fullstack', title: 'Full Stack Developer Intern' },
+  { id: 'job-frontend',  title: 'Frontend Developer Intern' },
+  { id: 'job-bd',        title: 'Business Development Intern' },
+];
+
+// ── HIDDEN JOBS ───────────────────────────────────────────────────────────
+const HIDDEN_KEY = 'zyoris_hidden_jobs_v1';
+function getHidden(){ try{ return JSON.parse(localStorage.getItem(HIDDEN_KEY))||[]; }catch(e){ return []; } }
+function saveHidden(h){ localStorage.setItem(HIDDEN_KEY, JSON.stringify(h)); }
+
+function toggleStaticJob(id){
+  let hidden = getHidden();
+  const isHidden = hidden.includes(id);
+  if(isHidden){ hidden = hidden.filter(h => h !== id); }
+  else { hidden.push(id); }
+  saveHidden(hidden);
+  applyHiddenJobs();
+  renderAdminJobs();
+}
+
+function applyHiddenJobs(){
+  const hidden = getHidden();
+  STATIC_JOBS.forEach(j => {
+    const el = document.getElementById(j.id);
+    if(!el) return;
+    if(hidden.includes(j.id)){
+      el.style.setProperty('display','none','important');
+    } else {
+      el.style.removeProperty('display');
+    }
+  });
+}
+
+// ── RENDER ADMIN LIST ─────────────────────────────────────────────────────
+function renderAdminJobs(){
+  const dynJobs = getJobs();
+  const hidden  = getHidden();
+  const el = document.getElementById('adm-jobs-list');
+  
+  // Static jobs rows
+  const staticRows = STATIC_JOBS.map(j => {
+    const isHidden = hidden.includes(j.id);
+    return `<div class="adm-job-item">
+      <span class="adm-job-name">${j.title}</span>
+      <div style="display:flex;gap:.5rem;align-items:center">
+        <span style="font-size:.72rem;padding:.2rem .55rem;border-radius:6px;background:${isHidden?'rgba(255,68,68,0.12)':'rgba(0,200,100,0.12)'};color:${isHidden?'#ff8888':'#00c864'};border:1px solid ${isHidden?'rgba(255,68,68,0.25)':'rgba(0,200,100,0.25)'}">${isHidden?'Hidden':'Live'}</span>
+        <button class="adm-del-btn" style="${isHidden?'background:rgba(0,200,100,0.1);border-color:rgba(0,200,100,0.25);color:#00c864':''}" onclick="toggleStaticJob('${j.id}')">${isHidden?'Show':'Hide'}</button>
+      </div>
+    </div>`;
+  }).join('');
+
+  // Dynamic jobs rows
+  const dynRows = dynJobs.length ? dynJobs.map(j=>`
+    <div class="adm-job-item">
+      <span class="adm-job-name">${j.title} <span style="font-size:.7rem;color:var(--text2)">(added)</span></span>
+      <button class="adm-del-btn" onclick="deleteJob('${j.id}')">🗑 Delete</button>
+    </div>`).join('') : '';
+
+  el.innerHTML = staticRows + dynRows;
+}
+
+// ── RENDER DYNAMIC JOBS ON PAGE ───────────────────────────────────────────
+function renderDynamicJobs(){
+  const jobs = getJobs();
+  const container = document.getElementById('dynamic-jobs-container');
+  if(!container) return;
+  container.innerHTML = jobs.map(j => {
+    const stackTags = j.stack ? j.stack.split(',').map(s=>`<span class="job-tag">${s.trim()}</span>`).join('') : '';
+    const workItems = j.work ? j.work.split('\n').filter(Boolean).map(w=>`<li>${w.trim()}</li>`).join('') : '';
+    const reqItems  = j.reqs ? j.reqs.split('\n').filter(Boolean).map(r=>`<li>${r.trim()}</li>`).join('') : '';
+    const payClass  = j.pay==='paid'?'paid':j.pay==='stipend'?'paid':'unpaid';
+    return `
+    <div class="job-card" id="${j.id}">
+      <div class="job-header">
+        <div class="job-meta">
+          <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+            <span class="job-badge">${j.type}</span>
+            <span class="job-badge ${payClass}">${j.payLabel}</span>
+            <span class="job-badge">Remote</span>
+          </div>
+          <div class="job-title">${j.title}</div>
+          ${j.stack ? `<div style="font-size:.88rem;color:var(--text2)">${j.stack}</div>` : ''}
+          ${stackTags ? `<div class="job-tags">${stackTags}</div>` : ''}
+        </div>
+        <button class="btn-toggle" onclick="toggleJob('${j.id}', this)">View Details ↓</button>
+      </div>
+      ${(workItems||reqItems) ? `
+      <div class="job-body">
+        ${workItems ? `<h4>What You'll Do</h4><ul>${workItems}</ul>` : ''}
+        ${reqItems  ? `<h4>Requirements</h4><ul>${reqItems}</ul>` : ''}
+        <div class="job-actions">
+          <a href="#apply" class="btn-apply" onclick="prefillRole('${j.title}')">Apply Now →</a>
+        </div>
+      </div>` : ''}
+    </div>`;
+  }).join('');
+}
+
+// Init on page load
+document.addEventListener('DOMContentLoaded', ()=>{ renderDynamicJobs(); applyHiddenJobs(); });
+</script>
