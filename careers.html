@@ -90,6 +90,10 @@ body.light-mode .form-input{background:#fff;border-color:rgba(13,71,161,0.2);col
 .form-input::placeholder{color:rgba(255,255,255,0.25)}
 body.light-mode .form-input::placeholder{color:rgba(10,30,63,0.3)}
 textarea.form-input{resize:vertical;min-height:120px}
+select.form-input option{background:#0d1b36;color:#e8edf5}
+body.light-mode select.form-input option{background:#ffffff;color:#0A1435}
+.adm-inp option{background:#0d1b36;color:#e8edf5}
+body.light-mode .adm-inp option{background:#ffffff;color:#0A1435}
 .submit-btn{width:100%;background:linear-gradient(135deg,#2979FF,#1a5bbf);color:#fff;border:none;padding:.9rem;border-radius:10px;font-weight:600;font-size:1rem;cursor:pointer;transition:all .2s;margin-top:.5rem}
 .submit-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(41,121,255,0.35)}
 .success-msg{display:none;background:rgba(0,200,100,0.1);border:1px solid rgba(0,200,100,0.3);color:#00c864;padding:1.25rem;border-radius:10px;text-align:center;margin-top:1rem}
@@ -133,6 +137,27 @@ body.light-mode #adm-remember+label{color:rgba(10,30,63,0.55)}
 .adm-msg.err{background:rgba(255,68,68,0.1);border:1px solid rgba(255,68,68,0.3);color:#ff8888}
 .adm-close{position:absolute;top:1.2rem;right:1.2rem;background:rgba(255,255,255,0.07);border:none;color:var(--text);width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:background .2s}
 .adm-close:hover{background:rgba(255,68,68,0.2)}
+
+/* ID PROOF SECTION */
+.id-proof-section{background:rgba(41,121,255,0.04);border:1px solid rgba(41,121,255,0.18);border-radius:14px;padding:1.4rem 1.5rem;margin-bottom:1.25rem}
+body.light-mode .id-proof-section{background:rgba(41,121,255,0.04);border-color:rgba(41,121,255,0.2)}
+.id-section-header{display:flex;align-items:center;gap:.55rem;font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#5ba3ff;margin-bottom:1.1rem}
+.id-section-icon{font-size:1.1rem}
+.upload-hint{font-size:.74rem;font-weight:400;color:rgba(255,255,255,0.35);margin-left:.4rem;text-transform:none;letter-spacing:0}
+body.light-mode .upload-hint{color:rgba(10,30,63,0.4)}
+.upload-zone{border:1.5px dashed rgba(41,121,255,0.35);border-radius:12px;padding:1.5rem;text-align:center;cursor:pointer;transition:all .2s;background:rgba(255,255,255,0.02);margin-top:.4rem}
+.upload-zone:hover,.upload-zone.dragover{border-color:#2979FF;background:rgba(41,121,255,0.07)}
+body.light-mode .upload-zone{background:rgba(255,255,255,0.6);border-color:rgba(41,121,255,0.3)}
+body.light-mode .upload-zone:hover{background:rgba(41,121,255,0.06)}
+.upload-icon{font-size:1.8rem;margin-bottom:.4rem}
+.upload-text{font-size:.9rem;font-weight:500;color:var(--text);margin-bottom:.2rem}
+.upload-subtext{font-size:.78rem;color:rgba(255,255,255,0.35)}
+body.light-mode .upload-subtext{color:rgba(10,30,63,0.4)}
+.file-preview-row{display:flex;align-items:center;gap:.75rem;justify-content:center}
+.file-icon{font-size:1.5rem}
+#file-name-display{font-size:.88rem;font-weight:500;color:#5ba3ff;max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.remove-file-btn{background:rgba(255,68,68,0.1);border:1px solid rgba(255,68,68,0.25);color:#ff8888;width:26px;height:26px;border-radius:50%;cursor:pointer;font-size:.75rem;display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0}
+.remove-file-btn:hover{background:rgba(255,68,68,0.25)}
 
 </style>
 </head>
@@ -391,6 +416,70 @@ body.light-mode #adm-remember+label{color:rgba(10,30,63,0.55)}
       <label>Portfolio / GitHub / LinkedIn URL</label>
       <input type="url" id="a-portfolio" class="form-input" placeholder="https://github.com/yourname" />
     </div>
+
+    <!-- ID PROOF SECTION -->
+    <div class="id-proof-section">
+      <div class="id-section-header">
+        <span class="id-section-icon">🪪</span>
+        <span>Identity Verification</span>
+      </div>
+
+      <div class="form-group">
+        <label>Country *</label>
+        <select id="a-country" class="form-input" onchange="updateIdProofOptions()" required>
+          <option value="">Select your country...</option>
+          <option value="India">🇮🇳  India</option>
+          <option value="United States">🇺🇸  United States</option>
+          <option value="United Kingdom">🇬🇧  United Kingdom</option>
+          <option value="Canada">🇨🇦  Canada</option>
+          <option value="Australia">🇦🇺  Australia</option>
+          <option value="Germany">🇩🇪  Germany</option>
+          <option value="France">🇫🇷  France</option>
+          <option value="UAE">🇦🇪  UAE</option>
+          <option value="Singapore">🇸🇬  Singapore</option>
+          <option value="Pakistan">🇵🇰  Pakistan</option>
+          <option value="Bangladesh">🇧🇩  Bangladesh</option>
+          <option value="Nepal">🇳🇵  Nepal</option>
+          <option value="Sri Lanka">🇱🇰  Sri Lanka</option>
+          <option value="Other">🌍  Other</option>
+        </select>
+      </div>
+
+      <div class="form-group" id="id-type-group" style="display:none">
+        <label>ID Proof Type *</label>
+        <select id="a-id-type" class="form-input" onchange="updateIdNumberLabel()" required>
+          <option value="">Select ID type...</option>
+        </select>
+      </div>
+
+      <div class="form-group" id="id-number-group" style="display:none">
+        <label id="id-number-label">ID Number *</label>
+        <input type="text" id="a-id-number" class="form-input" placeholder="Enter ID number" required />
+      </div>
+
+      <div class="form-group" id="id-upload-group" style="display:none">
+        <label>Upload ID Proof *
+          <span class="upload-hint">(JPG, PNG or PDF · Max 5MB)</span>
+        </label>
+        <div class="upload-zone" id="upload-zone" onclick="document.getElementById('a-id-file').click()" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event)">
+          <input type="file" id="a-id-file" accept=".jpg,.jpeg,.png,.pdf" style="display:none" onchange="handleFileSelect(event)" />
+          <div id="upload-placeholder">
+            <div class="upload-icon">📎</div>
+            <div class="upload-text">Click to upload or drag & drop</div>
+            <div class="upload-subtext">Front side of your ID</div>
+          </div>
+          <div id="upload-preview" style="display:none">
+            <div class="file-preview-row">
+              <span class="file-icon">📄</span>
+              <span id="file-name-display"></span>
+              <button type="button" class="remove-file-btn" onclick="removeFile(event)">✕</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END ID PROOF SECTION -->
+
     <div class="form-group">
       <label>Why do you want to join Zyoris? *</label>
       <textarea id="a-message" class="form-input" placeholder="Tell us a bit about yourself and why you want to build with us..."></textarea>
@@ -402,6 +491,143 @@ body.light-mode #adm-remember+label{color:rgba(10,30,63,0.55)}
 <footer>
   <p>© 2026 Zyoris Technology. &nbsp;·&nbsp; <a href="index.html">Home</a> &nbsp;·&nbsp; <a href="about.html">About</a> &nbsp;·&nbsp; <a href="mailto:zyoris.puneet@gmail.com">zyoris.puneet@gmail.com</a></p>
 </footer>
+
+<script>
+
+// ── ID PROOF LOGIC ────────────────────────────────────────────────────────
+const ID_TYPES = {
+  'India': [
+    { value: 'Aadhaar Card', label: 'Aadhaar Card', placeholder: 'XXXX XXXX XXXX' },
+    { value: 'PAN Card', label: 'PAN Card', placeholder: 'ABCDE1234F' },
+    { value: 'Passport', label: 'Passport', placeholder: 'A1234567' },
+    { value: "Driver's License", label: "Driver's License", placeholder: 'DL-XXXXXXXXXXXXXXX' },
+    { value: 'Voter ID', label: 'Voter ID', placeholder: 'XXXXXXXXXX' },
+  ],
+  'United States': [
+    { value: "Driver's License", label: "Driver's License", placeholder: 'State + License Number' },
+    { value: 'Passport', label: 'Passport', placeholder: 'XXXXXXXXX' },
+    { value: 'State ID', label: 'State ID Card', placeholder: 'State + ID Number' },
+  ],
+  'United Kingdom': [
+    { value: 'Passport', label: 'Passport', placeholder: 'XXXXXXXXX' },
+    { value: "Driver's License", label: "Driver's License (DVLA)", placeholder: 'MORGA657054SM9IJ' },
+    { value: 'National Insurance', label: 'National Insurance Number', placeholder: 'AB 12 34 56 C' },
+  ],
+  'Canada': [
+    { value: 'Passport', label: 'Passport', placeholder: 'XXXXXXXXX' },
+    { value: "Driver's License", label: "Driver's License", placeholder: 'Province + License No.' },
+    { value: 'Health Card', label: 'Provincial Health Card', placeholder: 'XXXX-XXX-XXX' },
+  ],
+  'Australia': [
+    { value: 'Passport', label: 'Passport', placeholder: 'XXXXXXXXX' },
+    { value: "Driver's License", label: "Driver's License", placeholder: 'State + License No.' },
+    { value: 'Medicare Card', label: 'Medicare Card', placeholder: 'XXXX XXXXX X' },
+  ],
+  'Germany': [
+    { value: 'Personalausweis', label: 'Personalausweis (National ID)', placeholder: 'LXXXXXXXXX' },
+    { value: 'Reisepass', label: 'Reisepass (Passport)', placeholder: 'CXXXXXXXXX' },
+    { value: 'Steuer-ID', label: 'Tax ID (Steuer-ID)', placeholder: '12 345 678 901' },
+  ],
+  'France': [
+    { value: "Carte Nationale d'Identite", label: "Carte Nationale d'Identité", placeholder: 'XXXXXXXXXXXXXX' },
+    { value: 'Passeport', label: 'Passeport', placeholder: 'XXXXXXXXX' },
+    { value: 'Securite Sociale', label: 'Numéro de Sécurité Sociale', placeholder: 'X XX XX XX XXX XXX XX' },
+  ],
+  'UAE': [
+    { value: 'Emirates ID', label: 'Emirates ID', placeholder: '784-XXXX-XXXXXXX-X' },
+    { value: 'Passport', label: 'Passport', placeholder: 'XXXXXXXXX' },
+    { value: 'Residence Visa', label: 'Residence Visa Number', placeholder: '000/XXXX/XXXXXXX' },
+  ],
+  'Singapore': [
+    { value: 'NRIC', label: 'NRIC (Singapore Citizen/PR)', placeholder: 'SXXXXXXXX' },
+    { value: 'FIN', label: 'FIN (Foreign Identification)', placeholder: 'GXXXXXXXX' },
+    { value: 'Passport', label: 'Passport', placeholder: 'XXXXXXXXX' },
+  ],
+  'Pakistan': [
+    { value: 'CNIC', label: 'CNIC (National ID)', placeholder: 'XXXXX-XXXXXXX-X' },
+    { value: 'Passport', label: 'Passport', placeholder: 'XXXXXXXXX' },
+    { value: "Driver's License", label: "Driver's License", placeholder: 'XX-XX-XXXXXXXX' },
+  ],
+  'Bangladesh': [
+    { value: 'NID', label: 'National ID Card (NID)', placeholder: 'XXXXXXXXXXXXXXXX' },
+    { value: 'Passport', label: 'Passport', placeholder: 'XXXXXXXXX' },
+    { value: 'Birth Certificate', label: 'Birth Registration No.', placeholder: 'XXXXXXXXXXXXXXXXXX' },
+  ],
+  'Nepal': [
+    { value: 'Citizenship Certificate', label: 'Citizenship Certificate', placeholder: 'XX-XX-XX-XXXXX' },
+    { value: 'Passport', label: 'Passport', placeholder: 'XXXXXXXXX' },
+  ],
+  'Sri Lanka': [
+    { value: 'NIC', label: 'National Identity Card (NIC)', placeholder: 'XXXXXXXXX V or XXXXXXXXXXXX' },
+    { value: 'Passport', label: 'Passport', placeholder: 'XXXXXXXXX' },
+  ],
+  'Other': [
+    { value: 'Passport', label: 'Passport', placeholder: 'Passport Number' },
+    { value: 'National ID', label: 'National ID Card', placeholder: 'ID Number' },
+    { value: "Driver's License", label: "Driver's License", placeholder: 'License Number' },
+  ],
+};
+
+function updateIdProofOptions(){
+  const country = document.getElementById('a-country').value;
+  const idTypeGroup = document.getElementById('id-type-group');
+  const idNumberGroup = document.getElementById('id-number-group');
+  const idUploadGroup = document.getElementById('id-upload-group');
+  const sel = document.getElementById('a-id-type');
+  if(!country){ idTypeGroup.style.display='none'; idNumberGroup.style.display='none'; idUploadGroup.style.display='none'; return; }
+  const types = ID_TYPES[country] || ID_TYPES['Other'];
+  sel.innerHTML = '<option value="">Select ID type...</option>' + types.map(t => '<option value="'+t.value+'">'+t.label+'</option>').join('');
+  idTypeGroup.style.display = 'block';
+  idNumberGroup.style.display = 'none';
+  idUploadGroup.style.display = 'none';
+  document.getElementById('a-id-number').value = '';
+}
+
+function updateIdNumberLabel(){
+  const country = document.getElementById('a-country').value;
+  const idType = document.getElementById('a-id-type').value;
+  const idNumberGroup = document.getElementById('id-number-group');
+  const idUploadGroup = document.getElementById('id-upload-group');
+  if(!idType){ idNumberGroup.style.display='none'; idUploadGroup.style.display='none'; return; }
+  const types = ID_TYPES[country] || ID_TYPES['Other'];
+  const selected = types.find(t => t.value === idType);
+  document.getElementById('id-number-label').textContent = idType + ' Number *';
+  const inp = document.getElementById('a-id-number');
+  inp.placeholder = selected ? selected.placeholder : 'Enter ID number';
+  inp.value = '';
+  idNumberGroup.style.display = 'block';
+  idUploadGroup.style.display = 'block';
+}
+
+let selectedFile = null;
+function handleFileSelect(event){ const file = event.target.files[0]; if(file) setUploadedFile(file); }
+function handleDragOver(event){ event.preventDefault(); document.getElementById('upload-zone').classList.add('dragover'); }
+function handleDragLeave(event){ document.getElementById('upload-zone').classList.remove('dragover'); }
+function handleDrop(event){
+  event.preventDefault();
+  document.getElementById('upload-zone').classList.remove('dragover');
+  const file = event.dataTransfer.files[0];
+  if(file) setUploadedFile(file);
+}
+function setUploadedFile(file){
+  const allowed = ['image/jpeg','image/jpg','image/png','application/pdf'];
+  if(!allowed.includes(file.type)){ alert('Please upload a JPG, PNG, or PDF file.'); return; }
+  if(file.size > 5*1024*1024){ alert('File size must be under 5MB.'); return; }
+  selectedFile = file;
+  document.getElementById('upload-placeholder').style.display = 'none';
+  document.getElementById('upload-preview').style.display = 'block';
+  document.getElementById('file-name-display').textContent = file.name;
+}
+function removeFile(event){
+  event.stopPropagation();
+  selectedFile = null;
+  document.getElementById('a-id-file').value = '';
+  document.getElementById('upload-placeholder').style.display = 'block';
+  document.getElementById('upload-preview').style.display = 'none';
+}
+// ─────────────────────────────────────────────────────────────────────────
+
+</script>
 
 <script>
 
@@ -454,11 +680,22 @@ async function submitApplication(){
   const role = document.getElementById('a-role').value;
   const portfolio = document.getElementById('a-portfolio').value.trim();
   const message = document.getElementById('a-message').value.trim();
+  const country = document.getElementById('a-country').value;
+  const idType = document.getElementById('a-id-type').value;
+  const idNumber = document.getElementById('a-id-number').value.trim();
   const errEl = document.getElementById('apply-error');
   const sucEl = document.getElementById('apply-success');
   errEl.style.display = 'none';
   if(!name || !email || !phone || !role || !message){
     errEl.textContent = 'Please fill in all required fields.';
+    errEl.style.display = 'block'; return;
+  }
+  if(!country || !idType || !idNumber){
+    errEl.textContent = 'Please complete the Identity Verification section.';
+    errEl.style.display = 'block'; return;
+  }
+  if(!selectedFile){
+    errEl.textContent = 'Please upload your ID proof document.';
     errEl.style.display = 'block'; return;
   }
   const btn = document.querySelector('.submit-btn');
@@ -470,6 +707,10 @@ async function submitApplication(){
     fd.append('from_name', 'Zyoris Careers');
     fd.append('name', name); fd.append('email', email); fd.append('phone', phone);
     fd.append('role', role); fd.append('portfolio', portfolio || 'Not provided');
+    fd.append('country', country);
+    fd.append('id_type', idType);
+    fd.append('id_number', idNumber);
+    if(selectedFile) fd.append('id_proof_file', selectedFile, selectedFile.name);
     fd.append('message', message);
     const res = await fetch('https://api.web3forms.com/submit', {method:'POST', body:fd});
     const data = await res.json();
