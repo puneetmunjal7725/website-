@@ -141,7 +141,7 @@
     flex-shrink: 0;
   }
   .logo-icon img { width: 36px; height: 36px; object-fit: contain; }
-  .nav-links { display: flex; gap: 2rem; }
+  .nav-links { display: flex; gap: 2rem; align-items: center; }
   nav a.nav-link {
     color: rgba(255,255,255,0.65); text-decoration: none;
     font-size: 0.9rem; font-weight: 400; transition: color .2s;
@@ -350,9 +350,9 @@
 
   .theme-toggle {
     background: rgba(41,121,255,0.1); border: 1px solid rgba(41,121,255,0.3);
-    color: var(--text-primary); border-radius: 50px; padding: 0.4rem 0.9rem;
+    color: var(--text-primary); border-radius: 50%; width: 36px; height: 36px;
     cursor: pointer; font-size: 0.78rem; font-weight: 500; font-family: 'DM Sans', sans-serif;
-    display: flex; align-items: center; gap: 6px; transition: all 0.2s;
+    display: flex; align-items: center; justify-content: center; transition: all 0.2s; flex-shrink: 0;
   }
   .theme-toggle:hover { background: rgba(41,121,255,0.2); }
   body.light-mode .theme-toggle { background: rgba(13,71,161,0.08); color: #0A1E3F; }
@@ -580,8 +580,8 @@
     <a href="#pricing" class="nav-link">Pricing</a>
     <a href="#contact" class="nav-link">Contact</a>
   </div>
-  <div style="display:flex;align-items:center;gap:0.75rem;">
-    <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn">Light</button>
+  <div style="display:flex;align-items:center;gap:1.25rem;">
+    <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn" title="Toggle theme"><svg id="theme-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button>
     <a href="#waitlist" class="nav-cta">Get Early Access</a>
   </div>
 </nav>
@@ -1096,12 +1096,18 @@ async function submitLead(){
 }
 
 /* ── Theme Toggle ── */
+
+function setThemeIcon(isLight){
+  const btn = document.getElementById('theme-btn');
+  if(!btn) return;
+  btn.innerHTML = isLight ? `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>` : `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`;
+}
 function toggleTheme(){
   const body = document.body;
   const btn = document.getElementById('theme-btn');
   body.classList.toggle('light-mode');
   const isLight = body.classList.contains('light-mode');
-  btn.innerHTML = isLight ? 'Dark' : 'Light';
+  setThemeIcon(isLight);
   localStorage.setItem('zyoris-theme', isLight ? 'light' : 'dark');
 }
 (function(){
@@ -1109,28 +1115,28 @@ function toggleTheme(){
   const saved = localStorage.getItem('zyoris-theme');
   if(saved === 'light'){
     document.body.classList.add('light-mode');
-    if(btn) btn.innerHTML = 'Dark';
+    if(btn) setThemeIcon(true);
   } else if(saved === 'dark'){
     document.body.classList.remove('light-mode');
-    if(btn) btn.innerHTML = 'Light';
+    if(btn) setThemeIcon(false);
   } else {
     // No manual preference — follow system setting
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     if(!prefersDark){
       document.body.classList.add('light-mode');
-      if(btn) btn.innerHTML = 'Dark';
+      if(btn) setThemeIcon(true);
     } else {
-      if(btn) btn.innerHTML = 'Light';
+      if(btn) setThemeIcon(false);
     }
     // Auto-update if system theme changes live
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
       if(localStorage.getItem('zyoris-theme')) return;
       if(e.matches){
         document.body.classList.remove('light-mode');
-        if(btn) btn.innerHTML = 'Light';
+        if(btn) setThemeIcon(false);
       } else {
         document.body.classList.add('light-mode');
-        if(btn) btn.innerHTML = 'Dark';
+        if(btn) setThemeIcon(true);
       }
     });
   }
