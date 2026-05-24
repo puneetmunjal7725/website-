@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Apply | Zyoris</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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" />
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#07112b;--text:#e8edf5;--text2:rgba(220,230,245,0.7);--blue:#2979FF;--white:#fff;--border:rgba(41,121,255,0.15)}
+body{background:var(--bg);color:var(--text);font-family:'Instrument Sans',sans-serif;min-height:100vh;transition:background .3s,color .3s}
+body.light-mode{--bg:#f0f4ff;--text:#0A1435;--text2:rgba(10,20,53,0.65);--border:rgba(13,71,161,0.12)}
+nav{position:sticky;top:0;z-index:100;background:rgba(7,17,43,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px}
+body.light-mode nav{background:rgba(240,244,255,0.95)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:'Exo 2',sans-serif;font-size:1.35rem;font-weight:600;letter-spacing:.04em;text-transform:lowercase;color:var(--white)}
+body.light-mode .logo{color:#0d1f4e}
+.logo img{width:32px;height:32px;object-fit:contain}
+.nav-right{display:flex;align-items:center;gap:2rem}
+.nav-link{color:rgba(255,255,255,0.65);text-decoration:none;font-size:.9rem;transition:color .2s}
+.nav-link:hover{color:#fff}
+body.light-mode .nav-link{color:rgba(10,30,63,0.65)}
+body.light-mode .nav-link:hover{color:#0A1E3F}
+.theme-btn{background:rgba(41,121,255,0.1);border:1px solid rgba(41,121,255,0.3);color:var(--text);width:36px;height:36px;border-radius:50%;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.theme-btn:hover{background:rgba(41,121,255,0.2)}
+body.light-mode .theme-btn{background:rgba(13,71,161,0.08);color:#0A1E3F}
+.hero{padding:4rem 2rem 2rem;text-align:center;max-width:700px;margin:0 auto}
+.hero-tag{display:inline-block;background:rgba(41,121,255,0.1);border:1px solid rgba(41,121,255,0.3);color:#5ba3ff;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;padding:.35rem 1rem;border-radius:20px;margin-bottom:1.5rem}
+.hero h1{font-family:'Exo 2',sans-serif;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;line-height:1.2;margin-bottom:.75rem}
+.hero h1 span{background:linear-gradient(135deg,#2979FF,#5ba3ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{font-size:1rem;color:var(--text2);line-height:1.6;margin-bottom:.75rem}
+.role-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(41,121,255,0.12);border:1px solid rgba(41,121,255,0.3);color:#5ba3ff;font-size:.82rem;font-weight:600;padding:.35rem .9rem;border-radius:20px}
+.role-badge .dot{width:7px;height:7px;background:#2979FF;border-radius:50%;animation:pulse 1.8s infinite;flex-shrink:0}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+.apply-wrap{max-width:660px;margin:0 auto;padding:2rem 2rem 5rem}
+.form-section{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:16px;padding:1.75rem;margin-bottom:1.25rem}
+body.light-mode .form-section{background:rgba(255,255,255,0.85);box-shadow:0 2px 14px rgba(13,71,161,0.06)}
+.sec-title{font-size:.75rem;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:#5ba3ff;margin-bottom:1.4rem;padding-bottom:.65rem;border-bottom:1px solid var(--border)}
+.form-group{margin-bottom:1.15rem}
+.form-group label{display:block;font-size:.85rem;font-weight:500;margin-bottom:.38rem;color:var(--text2)}
+.req{color:#ff6b6b;margin-left:2px}
+.opt{color:var(--text2);font-size:.78rem;font-weight:400}
+.form-input{width:100%;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:10px;padding:.72rem 1rem;color:var(--text);font-family:'Instrument Sans',sans-serif;font-size:.93rem;outline:none;transition:border-color .2s,background .2s}
+.form-input:focus{border-color:rgba(41,121,255,0.5);background:rgba(41,121,255,0.04)}
+body.light-mode .form-input{background:#fff;border-color:rgba(13,71,161,0.2);color:#0A1435}
+.form-input::placeholder{color:rgba(255,255,255,0.22)}
+body.light-mode .form-input::placeholder{color:rgba(10,30,63,0.28)}
+textarea.form-input{resize:vertical;min-height:108px}
+select.form-input option{background:#0d1b36;color:#e8edf5}
+body.light-mode select.form-input option{background:#fff;color:#0A1435}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:540px){.form-row{grid-template-columns:1fr}}
+.q-hint{font-size:.82rem;color:var(--text2);background:rgba(41,121,255,0.07);border:1px solid rgba(41,121,255,0.16);border-radius:9px;padding:.65rem .95rem;margin-bottom:1.2rem;line-height:1.6}
+body.light-mode .q-hint{background:rgba(41,121,255,0.05)}
+.char-row{font-size:.74rem;color:var(--text2);text-align:right;margin-top:.22rem}
+/* Languages Section */
+.lang-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:.55rem;margin-top:.5rem}
+.lang-chip{display:flex;align-items:center;gap:.5rem;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:9px;padding:.5rem .75rem;cursor:pointer;transition:all .18s;user-select:none}
+.lang-chip:hover{border-color:rgba(41,121,255,0.4);background:rgba(41,121,255,0.06)}
+.lang-chip.selected{background:rgba(41,121,255,0.12);border-color:rgba(41,121,255,0.5);color:#5ba3ff}
+.lang-chip input[type=checkbox]{accent-color:#2979FF;width:15px;height:15px;cursor:pointer;flex-shrink:0}
+.lang-chip span{font-size:.84rem;font-weight:500}
+body.light-mode .lang-chip{background:rgba(255,255,255,0.85);border-color:rgba(13,71,161,0.18)}
+body.light-mode .lang-chip:hover{border-color:rgba(13,71,161,0.45);background:rgba(41,121,255,0.06)}
+body.light-mode .lang-chip.selected{background:rgba(41,121,255,0.09);border-color:#2979FF;color:#1a5bbf}
+.lang-other-row{display:flex;align-items:center;gap:.6rem;margin-top:.55rem}
+.lang-other-row label{font-size:.84rem;color:var(--text2);white-space:nowrap}
+.lang-other-inp{flex:1;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:9px;padding:.45rem .8rem;color:var(--text);font-family:'Instrument Sans',sans-serif;font-size:.84rem;outline:none;transition:border-color .2s}
+.lang-other-inp:focus{border-color:rgba(41,121,255,0.5)}
+body.light-mode .lang-other-inp{background:#fff;border-color:rgba(13,71,161,0.2);color:#0A1435}
+.lang-other-inp::placeholder{color:rgba(255,255,255,0.22)}
+body.light-mode .lang-other-inp::placeholder{color:rgba(10,30,63,0.3)}
+/* Language multi-select dropdown */
+.lang-select-wrap{position:relative}
+.lang-trigger{width:100%;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:10px;padding:.72rem 2.2rem .72rem 1rem;color:var(--text);font-family:'Instrument Sans',sans-serif;font-size:.93rem;cursor:pointer;text-align:left;transition:border-color .2s,background .2s;display:flex;align-items:center;justify-content:space-between;gap:.5rem}
+.lang-trigger:hover,.lang-trigger.open{border-color:rgba(41,121,255,0.5);background:rgba(41,121,255,0.04)}
+body.light-mode .lang-trigger{background:#fff;border-color:rgba(13,71,161,0.2);color:#0A1435}
+.lang-trigger-text{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.88rem}
+.lang-trigger-text.placeholder{color:rgba(255,255,255,0.28)}
+body.light-mode .lang-trigger-text.placeholder{color:rgba(10,30,63,0.3)}
+.lang-trigger-arrow{flex-shrink:0;transition:transform .2s;color:var(--text2);font-size:.75rem}
+.lang-trigger.open .lang-trigger-arrow{transform:rotate(180deg)}
+.lang-dropdown{position:absolute;top:calc(100% + 6px);left:0;right:0;background:#0d1b36;border:1px solid rgba(41,121,255,0.3);border-radius:12px;z-index:500;display:none;box-shadow:0 12px 36px rgba(0,0,0,0.45);overflow:hidden}
+body.light-mode .lang-dropdown{background:#fff;border-color:rgba(13,71,161,0.2);box-shadow:0 8px 24px rgba(0,0,0,0.14)}
+.lang-dropdown.open{display:block}
+.lang-search-wrap{padding:.65rem .75rem .5rem;border-bottom:1px solid rgba(41,121,255,0.12)}
+.lang-search{width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(41,121,255,0.2);border-radius:8px;padding:.5rem .85rem;color:var(--text);font-family:'Instrument Sans',sans-serif;font-size:.88rem;outline:none}
+.lang-search:focus{border-color:rgba(41,121,255,0.5)}
+body.light-mode .lang-search{background:#f5f8ff;border-color:rgba(13,71,161,0.2);color:#0A1435}
+.lang-search::placeholder{color:rgba(255,255,255,0.28)}
+body.light-mode .lang-search::placeholder{color:rgba(10,30,63,0.3)}
+.lang-list{max-height:240px;overflow-y:auto;padding:.35rem 0}
+.lang-list::-webkit-scrollbar{width:5px}
+.lang-list::-webkit-scrollbar-track{background:transparent}
+.lang-list::-webkit-scrollbar-thumb{background:rgba(41,121,255,0.3);border-radius:4px}
+.lang-opt{display:flex;align-items:center;gap:.65rem;padding:.48rem .9rem;cursor:pointer;font-size:.88rem;color:var(--text2);transition:background .12s}
+.lang-opt:hover{background:rgba(41,121,255,0.08);color:var(--text)}
+.lang-opt.checked{color:#5ba3ff;background:rgba(41,121,255,0.07)}
+body.light-mode .lang-opt.checked{color:#1a5bbf}
+.lang-opt-check{width:16px;height:16px;border:1.5px solid rgba(41,121,255,0.4);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .15s;background:transparent}
+.lang-opt.checked .lang-opt-check{background:#2979FF;border-color:#2979FF;color:#fff}
+.lang-opt-name{flex:1}
+.lang-group-header{padding:.4rem .9rem .2rem;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(41,121,255,0.6);font-weight:600}
+.lang-tags-row{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.6rem;min-height:0}
+.lang-tag{display:inline-flex;align-items:center;gap:.35rem;background:rgba(41,121,255,0.12);border:1px solid rgba(41,121,255,0.3);color:#5ba3ff;border-radius:7px;padding:.22rem .55rem;font-size:.78rem;font-weight:500}
+body.light-mode .lang-tag{background:rgba(41,121,255,0.08);color:#1a5bbf}
+.lang-tag-rm{background:none;border:none;color:inherit;cursor:pointer;font-size:.82rem;padding:0;line-height:1;opacity:.7}
+.lang-tag-rm:hover{opacity:1}
+.lang-clear-btn{display:none;background:none;border:none;font-size:.78rem;color:rgba(255,100,100,0.7);cursor:pointer;padding:0;margin-top:.3rem}
+.lang-clear-btn:hover{color:#ff6b6b}
+.id-box{background:rgba(41,121,255,0.04);border:1px solid rgba(41,121,255,0.14);border-radius:13px;padding:1.4rem}
+.upload-zone{border:1.5px dashed rgba(41,121,255,0.32);border-radius:11px;padding:1.4rem;text-align:center;cursor:pointer;transition:all .2s;background:rgba(255,255,255,0.02);margin-top:.7rem}
+.upload-zone:hover,.upload-zone.dragover{border-color:#2979FF;background:rgba(41,121,255,0.06)}
+body.light-mode .upload-zone{background:rgba(255,255,255,0.6);border-color:rgba(41,121,255,0.28)}
+.upload-main{font-size:.9rem;font-weight:500;color:var(--text);margin-bottom:.18rem}
+.upload-sub{font-size:.77rem;color:var(--text2)}
+.file-row{display:flex;align-items:center;gap:.7rem;justify-content:center}
+#file-name-display{font-size:.87rem;font-weight:500;color:#5ba3ff;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rm-btn{background:rgba(255,68,68,0.1);border:1px solid rgba(255,68,68,0.25);color:#ff8888;width:24px;height:24px;border-radius:50%;cursor:pointer;font-size:.7rem;display:flex;align-items:center;justify-content:center;transition:background .15s;flex-shrink:0}
+.rm-btn:hover{background:rgba(255,68,68,0.25)}
+.submit-btn{width:100%;background:linear-gradient(135deg,#2979FF,#1a5bbf);color:#fff;border:none;padding:.88rem 2rem;border-radius:11px;font-weight:600;font-size:.98rem;cursor:pointer;transition:all .2s;font-family:'Instrument Sans',sans-serif;margin-top:.25rem}
+.submit-btn:hover:not([disabled]){transform:translateY(-2px);box-shadow:0 8px 24px rgba(41,121,255,0.32)}
+.submit-btn[disabled]{opacity:.55;cursor:not-allowed}
+.err{background:rgba(255,68,68,0.09);border:1px solid rgba(255,68,68,0.28);color:#ff8585;border-radius:9px;padding:.7rem .95rem;font-size:.86rem;margin-bottom:1rem;display:none}
+.suc{background:rgba(0,200,100,0.07);border:1px solid rgba(0,200,100,0.28);color:#4ddb92;border-radius:13px;padding:2.5rem;text-align:center;display:none}
+.suc h3{font-family:'Exo 2',sans-serif;font-size:1.35rem;margin-bottom:.45rem;color:#4ddb92}
+.suc p{color:var(--text2);font-size:.93rem;line-height:1.62}
+footer{text-align:center;padding:2.5rem;color:var(--text2);font-size:.84rem;border-top:1px solid var(--border)}
+footer a{color:rgba(91,163,255,0.7);text-decoration:none}
+footer a:hover{color:#5ba3ff}
+@media(max-width:600px){.apply-wrap{padding:1.2rem 1rem 4rem}.form-section{padding:1.2rem}nav{padding:0 1rem}.nav-right .nav-link{display:none}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAIAAADajyQQAAAVEUlEQVR42u17e5RX1ZXm3ud17+9Rv0fVr6SKguJRgIAC8hIExBiIxlZajWN8oN0xdsxq7bbT6clMTyZpV9Ldq9estKuTTKbTSeykW8dMNHSUjAF8ImBQUUAoHlU8iuJdBdT78buPc/aePy4UtCtBFHBNenFWrVr1vPd8Z3/7O3t/91wkIviPOAT8Bx2XgF0CdgnYJWAfaaiP4R7MQHz6GyEQ8XcfmCNQEs8gBgKAdSTExUV3EYERASAoiWFkl7/Vv6EpjCJ35Sh1x8J8Vd5jZkcsxcVChxej8ki4pyQC8Ip3+r6zvH/rfkImcjYK41El/uMl+Qc+Xa21csQJOX8HgDnHSgkA2NIy8K1/636t0flGZ33BwOSIre0fDLt7B2c0qK/cddnN11QDgLV0wRPvQgJLqIWI7Z3B48uO/e/XyxZMVc5IKRPxICKylmzMznb1BVFYvmFm6uv310+/vAgAsSUpLxi6CwOMiAFASmGte+JXRx5fdvxAp6wupnzPoJBSSiEEADhH7KyLIxvHRDHZqL1rICXDBz897L/eP762On0BE+98gTEzESTce/Gttm882bqhOcxVZFIpH1AprZVSQ8DIEdnY2pisdS62cUgcxVHU09lXW5L/5Z6xD392gtHKOQKA80y88wI2lE5N+7ofe2LHsrUdSvvFnE/CZ6G18qRWUkghBQoUgOzIudjF1jrryDobORuwi4HjgXJge/qnT8p+84vTbvnEWACIrUuI/bECI2JEFAK7+8p//9T2/7lsX+8A5AoZKQ2jROlLaVBpqbQWEgQiogBkYnLOucg65yiyccQuZBc7FyGFSFF/Tz/E5TsW1X/jT+ZfMWEYAFjrpBQfB7AzuMdP/nLnN3+0Ze/+crrgK+M51igVCC2kJ5WPSgmhpZDy1LozMxGRs0QR2YhcRBRZG5OL0AVgQ6CIOQ66+jJp+LOl07/y0MJCPkNEzB+amR8OGBEn67d+48Gvf+/t195ug5RXkfEYBKEGqQEVSoNSSeVLqUBIRJ2IASISETvLZMnFTBGRJReRi10cgIsEhc5FQLEEa6Ny3NXdMLbw2KOfuv8/zUuE50Nh+xDAkmU71Nbzze+98ePndjqHmXyaUDIqIRWgdNKgUEIoITRKLYSWUgBKRAWICEBsycVAlh05jphidhG7iGyELmIKmWJ0MVOELpJIg4N9MBAsWjjh7776mdlXjSWic0+5cwVGxELg5u2Hb37wmbb2sldMCykcCxBSSA2oACVIDUKhUCiMkBKFApQoJQIiICI7ckwE5IhiIgscg4vYxkghuYgpBBcDxeAiIAcUSbQIPNgzYBSu/OmfX79gsjvnlDvXvCRmRPz+z7a07e+oKKWYnLXEQECOyRJbIgcUAUdMMVHoXORc6Fxoo8DFZWfLNgooDp0NrAudi8iG4EJ2EVNEJ38Ss4vRRUAxU8hsnSNrXUUxE5Xjp37xNgLwBS+CEwZ4MAieCSPLzCiQHREqBIfMiMygABCQgQmAmCQKCYiUTIgZmBwTkgO2TJbYsQuBYnYWXIwuBo6I4uS3wATMAMSggIUno4vSaCICA9x9y+WlXBtTIKQm54CTiDkgxxwDRXAyhSJ2EbuQXEgudDZ0NnQuJBeii4AicjG4AGwZXMQuRoqRYgQLFDMRkhXskJxAJ6Tq7+qrKvZ/7rNzmeHc5ePDigesXvPm337nF282s9XDAYCcRalACBQSUABKEIpRAAqBAoVgwFMEYmBCICZicOhiBgIXgwuZLLADsuxCIItsgZ0QMgxjDDtunFfztf98z/xr5jJcaFVkhkSNnCNro7ajh37+y7U//sW2XcfyyiswxMyAQoIQgAKFZJCAiCgBEQQiAzEIIAACJnAO2DEQswOKhYuBIiYCjsjFSFZKjCxRX9eEUfLhP1x4+5JPVlfXauMlsjE0mfMCxsxJmcfMQyoSxzYK+puad/3LsvU/f/X4iaDSGOVcdAobIgpEZJAoBJ5kOwEzs2NgTKgLDpMosUWKmSxThESIGPX15dID99865YF7bxw3brznp41n8HRSYNIonF36PwAYIpaDMAjifC4thEjgIYAjjqJwsK9r/Ttb/2nZ9le3UOw8CaFjFlIgCBYIAAIFoABgZk7EA5mAHQAhEUDMZNnFRA45EghRYMH23ji39MjnPjV3zoxMtuB5npSn7otIRD29A5m0Z4wZWusPByyJVdOe9ne3Hr7xunFBEF5WXTD6TBVF61wcBR3Hjix/desPX2jffkAKCoACAIGIjCdXFxNgwAgn60XkGJiYiZxljgQ6GxOXyxNGe4/cN+vWm66tqq7xPF8pdabCB0F08EhHVWVu1Wubrp7eMH5s3Vnips6u8M++sC2TVi6mXS0HB8vly8fVn3EtVlKoVLqmbuzn7iwtmL73qVUtP11TPtYZ6rjbxiFIgSiBgcEhMvLJahGAiCwwMVuEGIHjQcpl6L7bJz1w97UTJ0zw0lklJTMMoUpKuW1N+46290yZ1NC4Y9/elta/+sofnCXfzgKMAbCnt3vDxv0dx/f39XU/8vkl78tdRCRHRM7P5KZMm/61kbWLZ+3+wcr2VzanXG+XiLvZRYwIzMkuBskHETMDx4AUWwHMi+eV/mTprPlzphYqq4kgDCLwjNbqDLJxUuk/t+KNN97e8c7m7dfOmTg0yQ8HLLnm0tumfvVv3nt17d47b5kzbuxIPmW8ICIzd3f3HTvR1ddfdtYNu6xYVzd88SeqJjfsW/Hrlide0Y3Nvgg6KR5w5JQQzMzITATMAp0jIKsaRmf/+M4Jt98wrW7EKKm8g4fa9h84igIrKrJ1taXqUjFJ7OTz9KnjRtflX1qzaVip4g8+u5hPCclvHPKxxx77bbJBxHW1JaZ4MHBf/uLtuVyOmREREYMwOnG850RnTzkI48gODAYHD7e1tR/PZLJ1I+onN5Tmj+eMCVqOlfv6rBLoXEzkwMUIhMg2xnQ29blbx/7Nn8779CdnVw8b0T8YbG1s3n+gXUjleZ4UcjAIwzD2tNJGJSTWWo8fU9PccmzJjbOvnTeTzlrvqw9qvjiTyVxWVTC+PxTJvr6B3r7BIIwZOFFeJtJSnujoeWX1m/Uja66aOvmqGbNH1Q//5Izmf162+cU3DkSYFlI6EnHkAOnamaVH75t+3ZxJxVKtc7Brd2vrgSOOOJXytdYChVLC9zxy3NXdb4kzaS+5u5/KVBULnpdO1AjgIwFLYi2kAOAk6EKIgYFyb9+gI2ZgZiZiYgYAxySlkFLubN63e8/+q6ZOnHLlxE9df9nk8SNvXL3x6eff2XOwNyKvZnj2zlum3HXzjNGjxiqTOnykvXlXa99A2RhtjJFSSim1UVJJKYUxShttLYWh9X2dGCGIeC6WgTqHsoMRT6/M0aNtFRV5F1kiYj6p48yc7BzMnPJNuRy8vm7DjqbdC+bOHD16wtK7auddPbll38EwiseMqhvXMCZXrO7s7Nn27o72Y51SSmO0FEJKqZQyRmuttNZGaaWUUsr3vc7Ojtqa6gQNkSXn4IMqfXUuNWJsT+91727aoqRZsGCedS4MQ2ZiQgBgpjPsEJH2Uu3tnc/824rJExuunT/7iiunjZ8wkYk83w/DeOOmbU3N+xgxlfKkFIgoldJSa6OMdxKb0sL3Pc/TTU27jh07Xjd8WAImtsQXpG0h4sQPS0Z9/YiVL64JorihYUxVVdFZCjjmk0qJp3ZkJGYlFYLY0ti8a2/r3NnTxo8bo7Xes+9w47bmru6+bDZjtEYQUkqttFba87Qx2nie0TLlmUw61dPXe7i57dChtjGjaocmEEeW+UIAY+Y4tkNfz5o+pbend/vOvYePtNUNrxk/viGV9sMwxCFkiIDJXofMlPL8OLKvvf72+rfeM0YzQyqVSqdTidmolDJKe9r4njGe9ozxtKrIpolc856W48dPEPPwmsoJ48ckggzAYRSfd6OZ+NJMcWzhlM0kpJw148p0Sm/bsbepec/eltbx48aOqBtBzEEYnf5PPN16SyFN2gAyokiljFIqwa+UMlobYzzfGE9rrTLZVNozbW3t+/YfjCLr+7oynxozui6VSp3caQCttS4pA/l8cwxiZ09vfFLm8oUrr7yisrKws2nPth373lj/dqly96SJE4qVlb19bmgGpwMIwMxSSCkUgEiG1lpr7XteKuVro3zPFPK5gfJAY+OOY8c7074u5NO1NZV1dSPy+bxSp6sQ6xyfAxfPiYrO/rsLaa0LhUIqlSqVSnXDa97dtK1xx559ra0NY0dNnDgpk8n09PQAolISgJ1zMIRGCCmVVFJrrbUyntFGKy1yuazWqql5V/PuFmIoFTMjhleOHDmiVKr2ff99ym4dDQnV+YkHn5zc++oS3/elLKXTmZqay2prSuvf2rxpc2Pzrj3Tpk0dNWp0EATlwbJSKqmGEFEIoZRUSmilPWNSnu9pnUqbYj5//MTxTZu3dnT2FvIVI4aXxjfU19YOz2Sz/76ZOMk+5xzThYgYMBPR+whNRCiEMdoY7Xte/YjaCeNGv/La+jc3bFq5ctWYMfWzZs0uFiv7egcBk64MhEAplZRSa220NkYXi3kAXvfG+m3bm4znja6vnTK54aqpk3w/C0Ima8r0/seCZ/RZ/NGBMbNAcM6hwCFmO0cJzZ76+etP/XxNT1//ogVTvvTQzQ/90agJ40evemnN5i3bW1paZ82aOW3adAAMgvKpvJLGGKVUKp0uFPKt+1vXrn2js7Nn5MjaKyaNW3DNjGJl1RPPrF/+8jYvlbrnltlLb5sBUlhHiZeclArk7KmWFz8qMARE7Onvd+TiyCIiMSOAUnJzY8tj31r28tpGqRCRN2zeu3zVhr/96tLfv2nxxIkNK1aufunVtS+/8tquXbuuu+66+vpR5XLAAEm48vk8s1uxcsXGTVvS6dS0qZMWzps1Y/oVm3cevf8r/7hmQ2smm0OdXrfltedfP/LVL86ZPumypLQRiFFkHfFgOcAPKqp+awed9Hb/8tMXfvXK5iU3Le7v67r7tvmFQs6Re/yfVn77iZcGgyCfMeTIkUXkvv5yOSjfe+v8v/7Le4cPq1j3xobnfrnqzbfeJeJrrpkzd+7cTDqjjfY9/2jbkdWr17a1tTc01C+cf/Wi6+cZL/v4j1Z95yerY9JVVSVQGWUqtJcdCHUqVfGFz4x/9K56Y2RHR/e/PrM2X1las3bdrTfMvvP2RWcx9H9z28LMUorOrp4vf+27QupCPr9py04laMoVDf/nuQ1f+sazxULa95VzxETE7Ii0lr5v3t6069nl6wqF3K03LZw5/YqKbOZoe3vjth0dHR3pTMbaeGtj47p1v7bWzps74647bln0yQVvb96/9M++/7MXNucLVdmKAsusMnnlFYQpZitKfqb4yiZbyquZl2eefX7N6+sbM2mvpWX/ho1bP7PkOs8zpzbuD0NFRHQ2Pnhg/4v9vYcPty1ZPA0Adu5pq8hmgck6OpW/iW3ETFxVle/qK3/xz7/3ixfW/4+v/+EXHlw6dcrk5f93VfOu1tbWg8XKYnv78VH1w69bMGfxogVBBI9+/ckf/HSNNOna2lqQaVAV2i9or6i8vNAV0qS1NqXq/K7WEwDVCPTe1q0nOto6TnRVFVJn5+JvjljSZabTvgC7dt1b3d3d86+e/MhDd6VTqT17mp9/aVuhUIzjMhOdcuZOeaJESkk/ndredOCpZauJ4LabF14zZ0axmM9m/EI+M2HcqN+/efH8+Ve/8OqWex7+zqrV24pVValMjkVKe3nlV2qvUvmVOlU0XlZ7uXxVXevu9XNH7rl+/pThNZWNW3c2Ne+R6P7i4XunT5t0FjPnbPYbMwC7dzdt6erqnT1zamVlJQEMDgz+6X/79rMrmrO5aiWjOAqQkOFkawbARJaIAUUQRVFX76yrL//WXz3wiQVX9vX2WmuLxcL+Qx3//e+efvq59V46m6vIkzDCZLWXM35JpaqMX6n9nNSZTEU1c7R749MTCzue/F9/OXLESETo7Oh8Z1NjdVVx2tTJQqqP7isSsZR46s8QEZxzA/3dTz6z4ttPvHqkU+VzaWfL5AgZGRiQmR0ROWJiEkL09wyioIfuv+HeO67LpPzX12//+398vu1od6G6UkjD0lNeVpm88osmVfLSJeXljV+sKAw7fujdjuan7l5U+6WH7xteN1Ke8q0SrSf6gGMvH2xxJy7YUMCZoRwEUTDQ1NT8vZ+sXP5aC6pc2oM4DoAxKZqBmYGJnGMQQjjngu5+8BRKyeVIV2TS6TQDCpWSOqO8nPYLKlXy09XaL2YLIxBt69Znx2aa/uILNy28dq6XyqTOKKwujMX920ZsbRAEA72dK19e/+0fv7JzX1CRyyLHzlqAk1s5AdEp/0BImfTXxmhmRKmF8oU0UqeVX2nSJeNXpbK1FVV1J45uHzy4/L4bRzy4dEnN8DptPKP1x30cIgjCOCrvP7D/+z/51dPLtwQuXZExsQ3YMQMQ8NAD9SFNElIJoVAZoVJC+VpndapS+9XZYj0q3dby8rTa9i9//oa5c2Z6qazveR/5pM55AUNE61wYBIP9PWt//c4//PDF9e8dT1fklXSxjZJtIPFFiAERhZAopFBGSB+VVjqrTM5khqVzI3q7DvjljQ/eNuH+O2+sqh5mjK+1ZIaPPrcLcuQoiuIoDNqOHnry2Zd/8PSvj/eqilyabDhk9BAjI4rk0bvUQnlS+dJkUxW1DvzBE43XX8lf+qNPXzVtiudnjDHnf6Tqgh0SY+YgCINy/8bN7/3DD1esWndAeTnfoLUxo6STpoiUSkupQXraq5B+VX9v14hs2yP3zLhjyfWFqmrP87VSfD6RukjH+uLYhmHQ1Xls2fOvfvcnq/cfdal8MdkAUEgUAqWWymi/EMYCyoduW1j96IO/N/Hyy42X9n3v//eDmEEYhsFAc9Pu7/5o+bOrdllV6aW0c4RSS+OjTJd7Oq4YYb/8+YW/d8O1FflKz/eVlBckUBcXGCJa68Iw7OvtWPHiusd/+PKOfbGXK7DQUWBTsvf+m8c9/MDNYxsajEkZo+EiDLyoL+1EURxF5Za9LU/+7KW3Nh8IYjeyJnf3rXMXXX9NtqJgjCd+t84Ev88yicKoPNjbfuyYjW2xslAslox5/9PK3z1gQ0aFc5TYkvLiHd3++IGd8fiXP547fcyvgPDHdqdLL+1cAnYJ2CVgl4CdOf4fxooVBMTggvAAAAAASUVORK5CYII=" alt="Zyoris logo" />
+    zyoris
+  </a>
+  <div class="nav-right">
+    <a href="https://zyoris.com/#features" class="nav-link">Features</a>
+    <a href="https://zyoris.com/#how" class="nav-link">How it works</a>
+    <a href="https://zyoris.com/#pricing" class="nav-link">Pricing</a>
+    <a href="https://zyoris.com/#contact" class="nav-link">Contact</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="careers.html" class="nav-link">Careers</a>
+    <button class="theme-btn" id="theme-btn" onclick="toggleTheme()" title="Toggle theme"><svg id="theme-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button>
+  </div>
+</nav>
+<div class="hero">
+  <div class="hero-tag" id="role-type-tag">Application</div>
+  <h1>Apply to <span id="role-title-hero">Zyoris</span></h1>
+  <p id="hero-sub">Fill out the form below. We review every application personally.</p>
+  <div id="role-badge" class="role-badge" style="display:none">
+    <span class="dot"></span>
+    <span id="role-badge-text"></span>
+  </div>
+</div>
+
+<div class="apply-wrap">
+  <div id="top-err" class="err"></div>
+  <div id="suc-msg" class="suc">
+    <h3>Application Received</h3>
+    <p>We have received your application and will get back to you within 3 to 5 business days. Keep an eye on your email.</p>
+  </div>
+
+  <div class="form-section">
+    <div class="sec-title">Personal Information</div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Full Name <span class="req">*</span></label>
+        <input type="text" id="a-name" class="form-input" placeholder="Your full name" />
+      </div>
+      <div class="form-group">
+        <label>Email Address <span class="req">*</span></label>
+        <input type="email" id="a-email" class="form-input" placeholder="you@email.com" />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Phone Number <span class="req">*</span></label>
+        <input type="tel" id="a-phone" class="form-input" placeholder="+91 XXXXX XXXXX" />
+      </div>
+      <div class="form-group">
+        <label>Role Applying For <span class="req">*</span></label>
+        <select id="a-role" class="form-input" onchange="onRoleChange()">
+          <option value="">Select a role...</option>
+          <option value="Full Stack Developer Intern">Full Stack Developer Intern</option>
+          <option value="Frontend Developer Intern">Frontend Developer Intern</option>
+          <option value="Business Development Intern">Business Development Intern</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── LANGUAGES SECTION ─────────────────────────────── -->
+  <div class="form-section">
+    <div class="sec-title">Languages Known <span class="opt" style="font-weight:400;letter-spacing:0;text-transform:none;font-size:.78rem"> — select all you speak / understand</span></div>
+    <div class="lang-select-wrap" id="lang-select-wrap">
+      <button type="button" class="lang-trigger" id="lang-trigger" onclick="toggleLangDrop(event)">
+        <span class="lang-trigger-text placeholder" id="lang-trigger-text">Select languages...</span>
+        <span class="lang-trigger-arrow">▼</span>
+      </button>
+      <div class="lang-dropdown" id="lang-dropdown">
+        <div class="lang-search-wrap">
+          <input type="text" class="lang-search" id="lang-search" placeholder="🔍  Search language..." oninput="filterLangs(this.value)" onclick="event.stopPropagation()" />
+        </div>
+        <div class="lang-list" id="lang-list"><!-- rendered by JS --></div>
+      </div>
+    </div>
+    <div class="lang-tags-row" id="lang-tags-row"></div>
+    <button type="button" class="lang-clear-btn" id="lang-clear-btn" onclick="clearAllLangs()">✕ Clear all</button>
+  </div>
+  <!-- ───────────────────────────────────────────────────── -->
+
+  <div class="form-section" id="sec-portfolio" style="display:none">
+    <div class="sec-title">Portfolio / Links</div>
+    <div class="form-group">
+      <label id="lbl-portfolio">Link</label>
+      <input type="url" id="a-portfolio" class="form-input" placeholder="https://..." />
+    </div>
+  </div>
+
+  <div class="form-section" id="sec-roleqs" style="display:none">
+    <div class="sec-title" id="rq-title">Role-Specific Questions</div>
+    <div id="rq-body"></div>
+  </div>
+
+  <div class="form-section">
+    <div class="sec-title">Your Message</div>
+    <div class="form-group">
+      <label id="lbl-msg">Why do you want to join Zyoris? <span class="req">*</span></label>
+      <textarea id="a-message" class="form-input" placeholder="Tell us about yourself, your motivation, and what you would bring to the team..." maxlength="500" oninput="cc(this,'msg-cnt')"></textarea>
+      <div class="char-row"><span id="msg-cnt">0</span> / 500</div>
+    </div>
+  </div>
+
+  <div class="form-section">
+    <div class="sec-title">Identity Verification</div>
+    <div class="id-box">
+      <div class="form-group">
+        <label>Country <span class="req">*</span></label>
+        <select id="a-country" class="form-input" onchange="idCountryChange()">
+          <option value="">Select your country...</option>
+          <option>India</option><option>United States</option><option>United Kingdom</option>
+          <option>Canada</option><option>Australia</option><option>Germany</option>
+          <option>France</option><option>UAE</option><option>Singapore</option>
+          <option>Pakistan</option><option>Bangladesh</option><option>Nepal</option>
+          <option>Sri Lanka</option><option>Other</option>
+        </select>
+      </div>
+      <div class="form-group" id="grp-idtype" style="display:none">
+        <label>ID Type <span class="req">*</span></label>
+        <select id="a-id-type" class="form-input" onchange="idTypeChange()">
+          <option value="">Select ID type...</option>
+        </select>
+      </div>
+      <div class="form-group" id="grp-idnum" style="display:none">
+        <label id="lbl-idnum">ID Number <span class="req">*</span></label>
+        <input type="text" id="a-id-number" class="form-input" placeholder="" />
+      </div>
+      <div id="grp-upload" style="display:none">
+        <div class="form-group" style="margin-bottom:.5rem">
+          <label>Upload ID Proof <span class="req">*</span> <span class="opt">JPG / PNG / PDF, max 5MB</span></label>
+        </div>
+        <div class="upload-zone" id="upload-zone"
+          onclick="document.getElementById('a-id-file').click()"
+          ondragover="event.preventDefault();this.classList.add('dragover')"
+          ondragleave="this.classList.remove('dragover')"
+          ondrop="fileDrop(event)">
+          <input type="file" id="a-id-file" accept=".jpg,.jpeg,.png,.pdf" style="display:none" onchange="fileChosen(event)" />
+          <div id="upl-placeholder">
+            <div class="upload-main">Click to upload or drag and drop</div>
+            <div class="upload-sub">JPG, PNG, PDF supported</div>
+          </div>
+          <div id="upl-preview" style="display:none">
+            <div class="file-row">
+              <span id="file-name-display"></span>
+              <button type="button" class="rm-btn" onclick="fileRemove(event)">x</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="bot-err" class="err"></div>
+  <button type="button" class="submit-btn" id="submit-btn" onclick="doSubmit()">Submit Application</button>
+</div>
+
+<footer>
+  <p>2026 Zyoris Technology &nbsp;·&nbsp; <a href="index.html">Home</a> &nbsp;·&nbsp; <a href="careers.html">Careers</a> &nbsp;·&nbsp; <a href="mailto:zyoris.puneet@gmail.com">zyoris.puneet@gmail.com</a></p>
+</footer>
+
+<script>
+var ID_TYPES = {
+  'India': [
+    {value:'Aadhaar Card',label:'Aadhaar Card',placeholder:'XXXX XXXX XXXX'},
+    {value:'PAN Card',label:'PAN Card',placeholder:'ABCDE1234F'},
+    {value:'Passport',label:'Passport',placeholder:'A1234567'},
+    {value:'Drivers License',label:'Drivers License',placeholder:'DL-XXXXXXXXXXXXXXX'},
+    {value:'Voter ID',label:'Voter ID',placeholder:'XXXXXXXXXX'}
+  ],
+  'United States': [
+    {value:'Drivers License',label:'Drivers License',placeholder:'State + License Number'},
+    {value:'Passport',label:'Passport',placeholder:'XXXXXXXXX'},
+    {value:'State ID',label:'State ID Card',placeholder:'State + ID Number'}
+  ],
+  'United Kingdom': [
+    {value:'Passport',label:'Passport',placeholder:'XXXXXXXXX'},
+    {value:'Drivers License',label:'Drivers License (DVLA)',placeholder:'MORGA657054SM9IJ'},
+    {value:'National Insurance',label:'National Insurance Number',placeholder:'AB 12 34 56 C'}
+  ],
+  'Canada': [
+    {value:'Passport',label:'Passport',placeholder:'XXXXXXXXX'},
+    {value:'Drivers License',label:'Drivers License',placeholder:'Province + License No.'},
+    {value:'Health Card',label:'Provincial Health Card',placeholder:'XXXX-XXX-XXX'}
+  ],
+  'Australia': [
+    {value:'Passport',label:'Passport',placeholder:'XXXXXXXXX'},
+    {value:'Drivers License',label:'Drivers License',placeholder:'State + License No.'},
+    {value:'Medicare Card',label:'Medicare Card',placeholder:'XXXX XXXXX X'}
+  ],
+  'Germany': [
+    {value:'Personalausweis',label:'Personalausweis (National ID)',placeholder:'LXXXXXXXXX'},
+    {value:'Reisepass',label:'Reisepass (Passport)',placeholder:'CXXXXXXXXX'},
+    {value:'Steuer-ID',label:'Tax ID (Steuer-ID)',placeholder:'12 345 678 901'}
+  ],
+  'France': [
+    {value:'Carte Nationale',label:"Carte Nationale d'Identite",placeholder:'XXXXXXXXXXXXXX'},
+    {value:'Passeport',label:'Passeport',placeholder:'XXXXXXXXX'},
+    {value:'Securite Sociale',label:'Numero de Securite Sociale',placeholder:'X XX XX XX XXX XXX XX'}
+  ],
+  'UAE': [
+    {value:'Emirates ID',label:'Emirates ID',placeholder:'784-XXXX-XXXXXXX-X'},
+    {value:'Passport',label:'Passport',placeholder:'XXXXXXXXX'},
+    {value:'Residence Visa',label:'Residence Visa Number',placeholder:'000/XXXX/XXXXXXX'}
+  ],
+  'Singapore': [
+    {value:'NRIC',label:'NRIC (Singapore Citizen/PR)',placeholder:'SXXXXXXXX'},
+    {value:'FIN',label:'FIN (Foreign Identification)',placeholder:'GXXXXXXXX'},
+    {value:'Passport',label:'Passport',placeholder:'XXXXXXXXX'}
+  ],
+  'Pakistan': [
+    {value:'CNIC',label:'CNIC (National ID)',placeholder:'XXXXX-XXXXXXX-X'},
+    {value:'Passport',label:'Passport',placeholder:'XXXXXXXXX'},
+    {value:'Drivers License',label:'Drivers License',placeholder:'XX-XX-XXXXXXXX'}
+  ],
+  'Bangladesh': [
+    {value:'NID',label:'National ID Card (NID)',placeholder:'XXXXXXXXXXXXXXXX'},
+    {value:'Passport',label:'Passport',placeholder:'XXXXXXXXX'},
+    {value:'Birth Certificate',label:'Birth Registration No.',placeholder:'XXXXXXXXXXXXXXXXXX'}
+  ],
+  'Nepal': [
+    {value:'Citizenship Certificate',label:'Citizenship Certificate',placeholder:'XX-XX-XX-XXXXX'},
+    {value:'Passport',label:'Passport',placeholder:'XXXXXXXXX'}
+  ],
+  'Sri Lanka': [
+    {value:'NIC',label:'National Identity Card (NIC)',placeholder:'XXXXXXXXX V or XXXXXXXXXXXX'},
+    {value:'Passport',label:'Passport',placeholder:'XXXXXXXXX'}
+  ],
+  'Other': [
+    {value:'Passport',label:'Passport',placeholder:'Passport Number'},
+    {value:'National ID',label:'National ID Card',placeholder:'ID Number'},
+    {value:'Drivers License',label:'Drivers License',placeholder:'License Number'}
+  ]
+};
+
+// ─── LANGUAGE MULTI-SELECT DROPDOWN ───────────────────────────────────────
+var LANG_DATA = [
+  { group: "Indian Languages", langs: [
+    "Assamese","Bengali","Bodo","Dogri","Gujarati","Hindi","Kannada","Kashmiri",
+    "Konkani","Maithili","Malayalam","Manipuri","Marathi","Nepali","Odia","Punjabi",
+    "Rajasthani","Sanskrit","Santali","Sindhi","Tamil","Telugu","Urdu",
+    "Awadhi","Bhojpuri","Chhattisgarhi","Haryanvi","Kumaoni","Magahi",
+    "Meitei","Mundari","Nagpuri","Tulu","Kutchi"
+  ]},
+  { group: "European Languages", langs: [
+    "Albanian","Basque","Belarusian","Bosnian","Bulgarian","Catalan","Croatian",
+    "Czech","Danish","Dutch","English","Estonian","Finnish","French","Galician",
+    "Georgian","German","Greek","Hungarian","Icelandic","Irish","Italian","Latvian",
+    "Lithuanian","Luxembourgish","Macedonian","Maltese","Moldovan","Montenegrin",
+    "Norwegian","Polish","Portuguese","Romanian","Russian","Scottish Gaelic",
+    "Serbian","Slovak","Slovenian","Spanish","Swedish","Turkish","Ukrainian","Welsh"
+  ]},
+  { group: "Asian Languages", langs: [
+    "Azerbaijani","Bahasa Indonesia","Bahasa Melayu","Burmese","Cantonese","Cebuano",
+    "Chinese (Simplified)","Chinese (Traditional)","Filipino / Tagalog","Hmong",
+    "Japanese","Javanese","Kazakh","Khmer","Korean","Kyrgyz","Lao","Mongolian",
+    "Pashto","Persian / Farsi","Sinhalese","Sundanese","Tajik","Thai","Tibetan",
+    "Turkmen","Uzbek","Vietnamese","Uyghur","Wu Chinese / Shanghainese"
+  ]},
+  { group: "Middle Eastern & Central Asian", langs: [
+    "Arabic","Armenian","Assyrian","Dari","Hebrew","Kurdish","Sorani","Yiddish"
+  ]},
+  { group: "African Languages", langs: [
+    "Afrikaans","Amharic","Berber / Tamazight","Chichewa","Hausa","Igbo",
+    "Kinyarwanda","Kirundi","Malagasy","Oromo","Sesotho","Shona","Somali",
+    "Swahili","Twi","Wolof","Xhosa","Yoruba","Zulu"
+  ]},
+  { group: "Pacific & Americas", langs: [
+    "Hawaiian","Maori","Quechua","Samoan","Tok Pisin","Tongan"
+  ]},
+  { group: "Sign Languages", langs: [
+    "American Sign Language (ASL)","British Sign Language (BSL)",
+    "Indian Sign Language (ISL)","International Sign"
+  ]}
+];
+
+// Flatten all langs for search
+var ALL_LANGS = [];
+LANG_DATA.forEach(function(g){ g.langs.forEach(function(l){ ALL_LANGS.push({ name: l, group: g.group }); }); });
+
+var selectedLangs = [];
+
+function buildLangList(filter) {
+  var listEl = document.getElementById('lang-list');
+  var q = (filter || '').toLowerCase().trim();
+  var html = '';
+
+  if (q) {
+    // Search mode — flat list
+    var matches = ALL_LANGS.filter(function(l){ return l.name.toLowerCase().indexOf(q) !== -1; });
+    if (!matches.length) {
+      html = '<div style="padding:.8rem 1rem;font-size:.85rem;color:var(--text2)">No languages found</div>';
+    } else {
+      matches.forEach(function(l){
+        var chk = selectedLangs.indexOf(l.name) !== -1;
+        html += langOptHTML(l.name, chk);
+      });
+    }
+  } else {
+    // Grouped mode
+    LANG_DATA.forEach(function(g){
+      html += '<div class="lang-group-header">' + g.group + '</div>';
+      g.langs.forEach(function(name){
+        var chk = selectedLangs.indexOf(name) !== -1;
+        html += langOptHTML(name, chk);
+      });
+    });
+  }
+  listEl.innerHTML = html;
+}
+
+function langOptHTML(name, checked) {
+  return '<div class="lang-opt' + (checked ? ' checked' : '') + '" onclick="toggleLang(\'' + name.replace(/'/g,"&#39;") + '\', this)">' +
+    '<span class="lang-opt-check">' + (checked ? '✓' : '') + '</span>' +
+    '<span class="lang-opt-name">' + name + '</span>' +
+    '</div>';
+}
+
+function toggleLang(name, optEl) {
+  var idx = selectedLangs.indexOf(name);
+  if (idx === -1) {
+    selectedLangs.push(name);
+    if (optEl) { optEl.classList.add('checked'); optEl.querySelector('.lang-opt-check').textContent = '✓'; }
+  } else {
+    selectedLangs.splice(idx, 1);
+    if (optEl) { optEl.classList.remove('checked'); optEl.querySelector('.lang-opt-check').textContent = ''; }
+  }
+  updateLangTrigger();
+  updateLangTags();
+}
+
+function updateLangTrigger() {
+  var txt = document.getElementById('lang-trigger-text');
+  if (selectedLangs.length === 0) {
+    txt.textContent = 'Select languages...';
+    txt.className = 'lang-trigger-text placeholder';
+  } else if (selectedLangs.length <= 3) {
+    txt.textContent = selectedLangs.join(', ');
+    txt.className = 'lang-trigger-text';
+  } else {
+    txt.textContent = selectedLangs.slice(0,3).join(', ') + ' +' + (selectedLangs.length - 3) + ' more';
+    txt.className = 'lang-trigger-text';
+  }
+}
+
+function updateLangTags() {
+  var row = document.getElementById('lang-tags-row');
+  var clearBtn = document.getElementById('lang-clear-btn');
+  row.innerHTML = selectedLangs.map(function(name){
+    return '<span class="lang-tag">' + name +
+      '<button class="lang-tag-rm" onclick="toggleLang(\'' + name.replace(/'/g,"&#39;") + '\', null);rebuildCheckedOpts()" title="Remove">✕</button>' +
+      '</span>';
+  }).join('');
+  clearBtn.style.display = selectedLangs.length ? 'inline-block' : 'none';
+}
+
+function rebuildCheckedOpts() {
+  // re-render list to sync checked states after tag removal
+  buildLangList(document.getElementById('lang-search').value);
+  updateLangTrigger();
+  updateLangTags();
+}
+
+function clearAllLangs() {
+  selectedLangs = [];
+  buildLangList(document.getElementById('lang-search').value);
+  updateLangTrigger();
+  updateLangTags();
+}
+
+function toggleLangDrop(e) {
+  e.stopPropagation();
+  var dd = document.getElementById('lang-dropdown');
+  var tr = document.getElementById('lang-trigger');
+  var isOpen = dd.classList.contains('open');
+  closeLangDrop();
+  if (!isOpen) {
+    dd.classList.add('open');
+    tr.classList.add('open');
+    document.getElementById('lang-search').value = '';
+    buildLangList('');
+    setTimeout(function(){ document.getElementById('lang-search').focus(); }, 60);
+  }
+}
+
+function closeLangDrop() {
+  document.getElementById('lang-dropdown').classList.remove('open');
+  document.getElementById('lang-trigger').classList.remove('open');
+}
+
+function filterLangs(q) {
+  buildLangList(q);
+}
+
+document.addEventListener('click', function(e){
+  if (!document.getElementById('lang-select-wrap').contains(e.target)) closeLangDrop();
+});
+
+// Init
+document.addEventListener('DOMContentLoaded', function(){
+  buildLangList('');
+});
+
+// ─── ROLE CONFIG ──────────────────────────────────────────────────────────────
+var RC = {};
+RC["Full Stack Developer Intern"] = {
+  type:"tech", tagLabel:"Technical Role", badge:"Technical Track",
+  title:"Technical Questions",
+  hint:"These questions help us understand your technical depth. Be specific - honest answers beat impressive-sounding ones.",
+  portLabel:"GitHub Profile URL", portPlaceholder:"https://github.com/yourusername", portRequired:true,
+  msgLabel:"Why do you want to join Zyoris as a Full Stack Dev Intern?",
+  qs:[
+    {id:"q1",lbl:"What tech stack have you worked with? List your main tools and languages.",ph:"e.g. React, Node.js, MongoDB, Express, REST APIs...",sel:false,req:true,max:400},
+    {id:"q2",lbl:"Describe your best project. What did you build, what was hard, and how did you solve it?",ph:"Be specific: what problem it solves, your role, challenges faced and how you tackled them.",sel:false,req:true,max:600},
+    {id:"q3",lbl:"Have you integrated a REST API before? Briefly describe the flow - request, response, and display.",ph:"e.g. Fetched data using fetch/axios, parsed JSON, rendered it in React...",sel:false,req:true,max:400},
+    {id:"q4",lbl:"How comfortable are you with Git? Describe your typical workflow.",ph:"e.g. I use branches for features, commit regularly, open PRs for review...",sel:false,req:false,max:300},
+    {id:"q5",lbl:"How many hours per week can you commit to this internship?",sel:true,req:true,opts:["Select hours...","Less than 10 hrs/week","10-20 hrs/week","20-30 hrs/week","30-40 hrs/week (Full-time)"]}
+  ]
+};
+RC["Frontend Developer Intern"] = {
+  type:"tech", tagLabel:"Technical Role", badge:"Technical Track",
+  title:"Technical Questions",
+  hint:"We want to see how you think about frontend. Real answers beat impressive-sounding ones.",
+  portLabel:"GitHub or Portfolio URL", portPlaceholder:"https://github.com/yourusername  or  https://yourportfolio.dev", portRequired:true,
+  msgLabel:"Why do you want to join Zyoris as a Frontend Dev Intern?",
+  qs:[
+    {id:"q1",lbl:"How comfortable are you with React.js? Which concepts do you know well?",ph:"e.g. components, props, state, useEffect, useState, conditional rendering, routing...",sel:false,req:true,max:400},
+    {id:"q2",lbl:"Describe a UI you built that you are proud of. What made it challenging?",ph:"Share the link if possible, and describe the challenge - responsive layout, performance, complex state, etc.",sel:false,req:true,max:500},
+    {id:"q3",lbl:"How do you handle responsive design? What tools or techniques do you use?",ph:"e.g. CSS Grid, Flexbox, media queries, Tailwind, mobile-first approach...",sel:false,req:true,max:350},
+    {id:"q4",lbl:"Do you have any experience with Redux or state management?",ph:"Brief answer is fine - even saying you know the concept but have not used it in production works.",sel:false,req:false,max:300},
+    {id:"q5",lbl:"How many hours per week can you commit?",sel:true,req:true,opts:["Select hours...","Less than 10 hrs/week","10-20 hrs/week","20-30 hrs/week","30-40 hrs/week (Full-time)"]}
+  ]
+};
+RC["Business Development Intern"] = {
+  type:"nontech", tagLabel:"Business Role", badge:"Business Track",
+  title:"Business and Communication Questions",
+  hint:"We are looking for someone driven, comfortable with outreach, and eager to learn B2B sales. No prior experience required - just show us how you think.",
+  portLabel:"LinkedIn Profile URL", portPlaceholder:"https://linkedin.com/in/yourprofile", portRequired:false,
+  msgLabel:"Why do you want to join Zyoris as a Business Development Intern?",
+  qs:[
+    {id:"q1",lbl:"Have you done any sales, marketing, or outreach before? Tell us about it.",ph:"Could be a college project, freelance gig, college fest sponsorship - anything counts. If not, tell us why you want to start.",sel:false,req:true,max:500},
+    {id:"q2",lbl:"Write a short cold outreach message to a small business owner introducing Zyoris (an AI business management tool for SMBs).",ph:"Write it as if you are actually sending it. Keep it under 100 words. Show us your communication style.",sel:false,req:true,max:600},
+    {id:"q3",lbl:"Which type of Indian business do you think would benefit most from Zyoris? Why?",ph:"e.g. A local retail shop, a CA firm, a small manufacturer - explain your reasoning.",sel:false,req:true,max:400},
+    {id:"q4",lbl:"How do you handle rejection or no-response in outreach? What would you do differently on the next attempt?",ph:"Be honest - there is no perfect answer here.",sel:false,req:false,max:350},
+    {id:"q5",lbl:"Are you comfortable reaching out to strangers on LinkedIn for B2B outreach?",sel:true,req:true,opts:["Select your comfort level...","Very comfortable - I already do this","Comfortable - willing to learn the right way","Somewhat nervous but open to try","Not comfortable yet"]},
+    {id:"q6",lbl:"How many hours per week can you commit?",sel:true,req:true,opts:["Select hours...","Less than 10 hrs/week","10-20 hrs/week","20-30 hrs/week","30-40 hrs/week (Full-time)"]}
+  ]
+};
+
+// ─── HELPERS ──────────────────────────────────────────────────────────────────
+function eH(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function eA(s){return String(s).replace(/&/g,"&amp;").replace(/"/g,"&quot;");}
+function cc(el,id){var s=document.getElementById(id);if(s)s.textContent=el.value.length;}
+
+// ─── GENERIC CONFIG BUILDER (for new/unknown roles) ──────────────────────────
+function buildGenericConfig(role, type) {
+  var isTech = (type === "tech");
+  return {
+    type:        isTech ? "tech" : "nontech",
+    tagLabel:    isTech ? "Technical Role" : "Business Role",
+    badge:       isTech ? "Technical Track" : "Business Track",
+    title:       isTech ? "Technical Questions" : "Business and Communication Questions",
+    hint:        isTech
+      ? "These questions help us understand your technical depth. Be specific - honest answers beat impressive-sounding ones."
+      : "We are looking for someone driven and eager to learn. No prior experience required - just show us how you think.",
+    portLabel:    isTech ? "GitHub or Portfolio URL" : "LinkedIn Profile URL",
+    portPlaceholder: isTech ? "https://github.com/yourusername" : "https://linkedin.com/in/yourprofile",
+    portRequired: isTech,
+    msgLabel:    "Why do you want to join Zyoris as " + role + "?",
+    qs: isTech ? [
+      {id:"q1",lbl:"What tech stack have you worked with? List your main tools and languages.",ph:"e.g. React, Node.js, Python, SQL, REST APIs...",sel:false,req:true,max:400},
+      {id:"q2",lbl:"Describe your best project. What did you build and what was challenging about it?",ph:"Be specific: the problem, your role, challenges faced and how you solved them.",sel:false,req:true,max:600},
+      {id:"q3",lbl:"How comfortable are you with Git? Describe your typical workflow.",ph:"e.g. I use branches for features, commit regularly, open PRs for review...",sel:false,req:false,max:300},
+      {id:"q4",lbl:"How many hours per week can you commit?",sel:true,req:true,opts:["Select hours...","Less than 10 hrs/week","10-20 hrs/week","20-30 hrs/week","30-40 hrs/week (Full-time)"]}
+    ] : [
+      {id:"q1",lbl:"Have you done any sales, marketing, or outreach before? Tell us about it.",ph:"Could be a college project, freelance gig, college fest - anything counts. If not, tell us why you want to start.",sel:false,req:true,max:500},
+      {id:"q2",lbl:"Write a short cold outreach message introducing Zyoris to a potential client.",ph:"Write it as if you are actually sending it. Keep it under 100 words.",sel:false,req:true,max:600},
+      {id:"q3",lbl:"How do you handle rejection or no-response? What would you do differently next time?",ph:"Be honest - there is no perfect answer here.",sel:false,req:false,max:350},
+      {id:"q4",lbl:"How many hours per week can you commit?",sel:true,req:true,opts:["Select hours...","Less than 10 hrs/week","10-20 hrs/week","20-30 hrs/week","30-40 hrs/week (Full-time)"]}
+    ]
+  };
+}
+
+// ─── ROLE CHANGE ──────────────────────────────────────────────────────────────
+function onRoleChange(typeOverride) {
+  var role = document.getElementById("a-role").value;
+  var cfg  = RC[role] || null;
+
+  // If no known config but we have a type param, build a generic one
+  if (!cfg && typeOverride) {
+    cfg = buildGenericConfig(role, typeOverride);
+  }
+
+  document.getElementById("role-title-hero").textContent = cfg ? role : "Zyoris";
+  document.getElementById("hero-sub").textContent = cfg
+    ? (cfg.type === "tech"
+        ? "Answer the technical questions honestly. We care more about how you think than what you know."
+        : "Show us your communication style and drive. No prior experience needed.")
+    : "Fill out the form below. We review every application personally.";
+  document.getElementById("role-type-tag").textContent = cfg ? cfg.tagLabel : "Application";
+
+  var badge = document.getElementById("role-badge");
+  if (cfg) {
+    document.getElementById("role-badge-text").textContent = cfg.badge;
+    badge.style.display = "inline-flex";
+  } else {
+    badge.style.display = "none";
+  }
+
+  var secPort = document.getElementById("sec-portfolio");
+  var secQs   = document.getElementById("sec-roleqs");
+  var rqBody  = document.getElementById("rq-body");
+
+  if (!cfg) {
+    secPort.style.display = "none";
+    secQs.style.display   = "none";
+    rqBody.innerHTML      = "";
+    document.getElementById("lbl-msg").innerHTML = "Why do you want to join Zyoris? <span class=\"req\">*</span>";
+    return;
+  }
+
+  // Portfolio
+  secPort.style.display = "block";
+  var portReq = cfg.portRequired
+    ? " <span class=\"req\">*</span>"
+    : " <span class=\"opt\">(Optional)</span>";
+  document.getElementById("lbl-portfolio").innerHTML = eH(cfg.portLabel) + portReq;
+  document.getElementById("a-portfolio").placeholder = cfg.portPlaceholder;
+
+  // Message label
+  document.getElementById("lbl-msg").innerHTML = eH(cfg.msgLabel) + " <span class=\"req\">*</span>";
+
+  // Build questions HTML
+  document.getElementById("rq-title").textContent = cfg.title;
+  var html = "<div class=\"q-hint\">" + eH(cfg.hint) + "</div>";
+
+  for (var i = 0; i < cfg.qs.length; i++) {
+    var q = cfg.qs[i];
+    var suffix = q.req
+      ? " <span class=\"req\">*</span>"
+      : " <span class=\"opt\">(Optional)</span>";
+
+    html += "<div class=\"form-group\">";
+    html += "<label>" + (i + 1) + ". " + eH(q.lbl) + suffix + "</label>";
+
+    if (q.sel) {
+      html += "<select id=\"" + q.id + "\" class=\"form-input\">";
+      for (var j = 0; j < q.opts.length; j++) {
+        var v = j === 0 ? "" : eA(q.opts[j]);
+        html += "<option value=\"" + v + "\">" + eH(q.opts[j]) + "</option>";
+      }
+      html += "</select>";
+    } else {
+      var cntId = q.id + "_c";
+      html += "<textarea id=\"" + q.id + "\" class=\"form-input\"";
+      html += " placeholder=\"" + eA(q.ph) + "\"";
+      html += " maxlength=\"" + q.max + "\"";
+      html += " oninput=\"cc(this,&quot;" + cntId + "&quot;)\"></textarea>";
+      html += "<div class=\"char-row\"><span id=\"" + cntId + "\">0</span> / " + q.max + "</div>";
+    }
+    html += "</div>";
+  }
+
+  rqBody.innerHTML = html;
+  secQs.style.display = "block";
+}
+
+// ─── ID PROOF ─────────────────────────────────────────────────────────────────
+function idCountryChange() {
+  var country  = document.getElementById("a-country").value;
+  var grpType  = document.getElementById("grp-idtype");
+  var grpNum   = document.getElementById("grp-idnum");
+  var grpUpl   = document.getElementById("grp-upload");
+  var sel      = document.getElementById("a-id-type");
+  if (!country) { grpType.style.display=grpNum.style.display=grpUpl.style.display="none"; return; }
+  var types = ID_TYPES[country] || ID_TYPES["Other"];
+  var opts  = "<option value=\"\">Select ID type...</option>";
+  for (var i = 0; i < types.length; i++) {
+    opts += "<option value=\"" + eA(types[i].value) + "\">" + eH(types[i].label) + "</option>";
+  }
+  sel.innerHTML = opts;
+  grpType.style.display = "block";
+  grpNum.style.display  = grpUpl.style.display = "none";
+  document.getElementById("a-id-number").value = "";
+}
+
+function idTypeChange() {
+  var country = document.getElementById("a-country").value;
+  var idType  = document.getElementById("a-id-type").value;
+  var grpNum  = document.getElementById("grp-idnum");
+  var grpUpl  = document.getElementById("grp-upload");
+  if (!idType) { grpNum.style.display=grpUpl.style.display="none"; return; }
+  var types = ID_TYPES[country] || ID_TYPES["Other"];
+  var found = null;
+  for (var i = 0; i < types.length; i++) { if (types[i].value === idType) { found = types[i]; break; } }
+  document.getElementById("lbl-idnum").innerHTML = eH(idType) + " Number <span class=\"req\">*</span>";
+  var inp = document.getElementById("a-id-number");
+  inp.placeholder = found ? found.placeholder : "Enter ID number";
+  inp.value = "";
+  grpNum.style.display = grpUpl.style.display = "block";
+}
+
+// ─── FILE UPLOAD ──────────────────────────────────────────────────────────────
+var pickedFile = null;
+function fileChosen(e) { var f = e.target.files[0]; if (f) attachFile(f); }
+function fileDrop(e) {
+  e.preventDefault();
+  document.getElementById("upload-zone").classList.remove("dragover");
+  var f = e.dataTransfer.files[0]; if (f) attachFile(f);
+}
+function attachFile(f) {
+  var ok = ["image/jpeg","image/jpg","image/png","application/pdf"];
+  if (ok.indexOf(f.type) < 0) { alert("Please upload a JPG, PNG, or PDF file."); return; }
+  if (f.size > 5*1024*1024) { alert("File size must be under 5MB."); return; }
+  pickedFile = f;
+  document.getElementById("upl-placeholder").style.display = "none";
+  document.getElementById("upl-preview").style.display = "block";
+  document.getElementById("file-name-display").textContent = f.name;
+}
+function fileRemove(e) {
+  e.stopPropagation();
+  pickedFile = null;
+  document.getElementById("a-id-file").value = "";
+  document.getElementById("upl-placeholder").style.display = "block";
+  document.getElementById("upl-preview").style.display = "none";
+}
+
+// ─── ERRORS ───────────────────────────────────────────────────────────────────
+function showErr(msg) {
+  var e1 = document.getElementById("top-err");
+  var e2 = document.getElementById("bot-err");
+  e1.textContent = e2.textContent = msg;
+  e1.style.display = e2.style.display = "block";
+  e1.scrollIntoView({behavior:"smooth",block:"center"});
+}
+function hideErr() {
+  document.getElementById("top-err").style.display = "none";
+  document.getElementById("bot-err").style.display = "none";
+}
+
+// ─── SUBMIT ───────────────────────────────────────────────────────────────────
+async function doSubmit() {
+  hideErr();
+  var name    = (document.getElementById("a-name").value    || "").trim();
+  var email   = (document.getElementById("a-email").value   || "").trim();
+  var phone   = (document.getElementById("a-phone").value   || "").trim();
+  var role    = (document.getElementById("a-role").value    || "").trim();
+  var portEl  = document.getElementById("a-portfolio");
+  var port    = portEl ? (portEl.value || "").trim() : "";
+  var msg     = (document.getElementById("a-message").value || "").trim();
+  var country = (document.getElementById("a-country").value || "").trim();
+  var idType  = (document.getElementById("a-id-type").value || "").trim();
+  var idNum   = (document.getElementById("a-id-number").value || "").trim();
+
+  if (!name)  { showErr("Please enter your full name.");    return; }
+  if (!email) { showErr("Please enter your email address."); return; }
+  if (!phone) { showErr("Please enter your phone number.");  return; }
+  if (!role)  { showErr("Please select a role.");            return; }
+  if (!msg)   { showErr("Please fill in the Your Message field."); return; }
+
+  var cfg = RC[role] || null;
+  if (cfg && cfg.portRequired && !port) {
+    showErr("Please provide your " + cfg.portLabel + "."); return;
+  }
+  if (cfg) {
+    for (var i = 0; i < cfg.qs.length; i++) {
+      var q = cfg.qs[i];
+      if (q.req) {
+        var el = document.getElementById(q.id);
+        if (!el || !el.value.trim()) {
+          showErr("Please answer question " + (i+1) + ": \"" + q.lbl.substring(0,60) + "...\"");
+          return;
+        }
+      }
+    }
+  }
+  if (!country)  { showErr("Please select your country in the Identity Verification section."); return; }
+  if (!idType)   { showErr("Please select your ID type."); return; }
+  if (!idNum)    { showErr("Please enter your ID number."); return; }
+  if (!pickedFile) { showErr("Please upload your ID proof document."); return; }
+
+  var btn = document.getElementById("submit-btn");
+  btn.disabled = true; btn.textContent = "Sending...";
+
+  var answers = "";
+  if (cfg) {
+    for (var j = 0; j < cfg.qs.length; j++) {
+      var qj = cfg.qs[j];
+      var elj = document.getElementById(qj.id);
+      if (elj) answers += "Q" + (j+1) + ". " + qj.lbl + "\nA: " + (elj.value.trim() || "-") + "\n\n";
+    }
+  }
+
+  try {
+    var fd = new FormData();
+    fd.append("access_key",  "b2ccc522-79fc-4665-910d-e10a6e2aad52");
+    fd.append("subject",     "New Application: " + role + " - " + name);
+    fd.append("from_name",   "Zyoris Careers");
+    fd.append("name",        name);
+    fd.append("email",       email);
+    fd.append("phone",       phone);
+    fd.append("role",        role);
+    fd.append("portfolio",   port || "Not provided");
+    fd.append("country",     country);
+    fd.append("id_type",     idType);
+    fd.append("id_number",   idNum);
+    fd.append("role_answers", answers || "N/A");
+    fd.append("message",     msg);
+    // Languages
+    // Languages
+    fd.append("languages_known", selectedLangs.length ? selectedLangs.join(", ") : "Not specified");
+    if (pickedFile) fd.append("id_proof_file", pickedFile, pickedFile.name);
+
+    var res  = await fetch("https://api.web3forms.com/submit", {method:"POST", body:fd});
+    var data = await res.json();
+    if (data.success) {
+      document.getElementById("suc-msg").style.display = "block";
+      btn.style.display = "none";
+      document.querySelectorAll(".form-input").forEach(function(el){ el.disabled = true; });
+      document.getElementById("suc-msg").scrollIntoView({behavior:"smooth",block:"center"});
+    } else { throw new Error("failed"); }
+  } catch(e) {
+    btn.disabled = false; btn.textContent = "Submit Application";
+    showErr("Something went wrong. Please email us at zyoris.puneet@gmail.com");
+  }
+}
+
+// ─── URL PREFILL ──────────────────────────────────────────────────────────────
+window.addEventListener("DOMContentLoaded", function() {
+  var params   = new URLSearchParams(window.location.search);
+  var role     = params.get("role") || "";
+  var typeParam = params.get("type") || "";
+
+  // If role matches a known config, use it directly
+  // If role is unknown (new job title), build a generic config from type param
+  if (role) {
+    var sel = document.getElementById("a-role");
+    // Add the role to the dropdown if it is not already there
+    if (sel) {
+      var found = false;
+      for (var i = 0; i < sel.options.length; i++) {
+        if (sel.options[i].value === role) { found = true; break; }
+      }
+      if (!found) {
+        var opt = document.createElement("option");
+        opt.value = role; opt.textContent = role;
+        sel.appendChild(opt);
+      }
+      sel.value = role;
+    }
+    onRoleChange(typeParam);
+  }
+});
+
+// ─── THEME ────────────────────────────────────────────────────────────────────
+function setThemeIcon(isLight){
+  const btn = document.getElementById('theme-btn');
+  if(!btn) return;
+  btn.innerHTML = isLight ? `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>` : `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`;
+}
+function toggleTheme(){
+  const body = document.body;
+  const btn = document.getElementById('theme-btn');
+  body.classList.toggle('light-mode');
+  const isLight = body.classList.contains('light-mode');
+  setThemeIcon(isLight);
+  localStorage.setItem('zyoris-theme', isLight ? 'light' : 'dark');
+}
+(function(){
+  const btn = document.getElementById('theme-btn');
+  const saved = localStorage.getItem('zyoris-theme');
+  if(saved === 'light'){ document.body.classList.add('light-mode'); if(btn) setThemeIcon(true); }
+  else if(saved === 'dark'){ document.body.classList.remove('light-mode'); if(btn) setThemeIcon(false); }
+  else {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if(!prefersDark){ document.body.classList.add('light-mode'); if(btn) setThemeIcon(true); }
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+      if(localStorage.getItem('zyoris-theme')) return;
+      document.body.classList.toggle('light-mode', !e.matches);
+      if(btn) setThemeIcon(!e.matches);
+    });
+  }
+})();
+</script>
+<script>
+document.addEventListener("contextmenu", function(e){ e.preventDefault(); });
+document.addEventListener("keydown", function(e){
+  if(e.key==="F12"||(e.ctrlKey&&e.shiftKey&&"IJCijc".indexOf(e.key)>=0)||(e.ctrlKey&&"UuSs".indexOf(e.key)>=0)){
+    e.preventDefault(); return false;
+  }
+});
+</script>
+</body>
+</html>
