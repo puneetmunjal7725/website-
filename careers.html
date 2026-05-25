@@ -293,7 +293,7 @@ body.light-mode .share-menu{background:#ffffff;border-color:rgba(13,71,161,0.2);
           <li>Potential full-time role based on performance</li>
         </ul>
         <div class="job-actions">
-          <a href="apply.html?role=Full+Stack+Developer+Intern" class="btn-apply">Apply Now →</a>
+          <a href="https://forms.gle/hBMRdscpo4NTjP658" target="_blank" class="btn-apply">Apply Now →</a>
         </div>
       </div>
     </div>
@@ -352,7 +352,7 @@ body.light-mode .share-menu{background:#ffffff;border-color:rgba(13,71,161,0.2);
           <li>Future paid opportunity based on performance</li>
         </ul>
         <div class="job-actions">
-          <a href="apply.html?role=Frontend+Developer+Intern" class="btn-apply">Apply Now →</a>
+          <a href="https://forms.gle/hBMRdscpo4NTjP658" target="_blank" class="btn-apply">Apply Now →</a>
         </div>
       </div>
     </div>
@@ -410,7 +410,7 @@ body.light-mode .share-menu{background:#ffffff;border-color:rgba(13,71,161,0.2);
           <li>Path to full-time BD role</li>
         </ul>
         <div class="job-actions">
-          <a href="apply.html?role=Business+Development+Intern" class="btn-apply">Apply Now →</a>
+          <a href="https://forms.gle/ZyLv7gEsnoJctYZq7" target="_blank" class="btn-apply">Apply Now →</a>
         </div>
       </div>
     </div>
@@ -978,7 +978,7 @@ function renderDynamicJobs(){
         ${workItems ? `<h4>What You'll Do</h4><ul>${workItems}</ul>` : ''}
         ${reqItems  ? `<h4>Requirements</h4><ul>${reqItems}</ul>` : ''}
         <div class="job-actions">
-          <a href="apply.html?role=${encodeURIComponent(j.title)}&type=${j.category||'tech'}" class="btn-apply">Apply Now →</a>
+          <a href="${j.category === 'nontech' ? 'https://forms.gle/ZyLv7gEsnoJctYZq7' : 'https://forms.gle/hBMRdscpo4NTjP658'}" target="_blank" class="btn-apply">Apply Now →</a>
         </div>
       </div>` : ''}
     </div>`;
