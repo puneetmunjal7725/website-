@@ -1,1 +1,5 @@
 permalink: pretty
+
+# WFH portal (static React build) — do not process with Jekyll
+include:
+  - zy-wfh-7k2m
